@@ -142,6 +142,7 @@ Putting these together, we get the if and only if statement we were looking for.
     (3) From step (1), we can put in the implication into part (2) that if and only if $a \in A$ and $a \in B$, then $a \in A$.
     \[A = \left\{a: a \in A, a \in B\right\}\]
     (4) We can rewrite that as $A \cap B = A$.
+    QED
 \end{proof}
 
 \subsection{Solution (c)}
@@ -186,7 +187,80 @@ Part 1: $A \cap B = \emptyset \implies A \setminus B = A$
 Part 2: $A \setminus B = A \implies A \cap B = \emptyset$
 \begin{proof}
     Given: $A \setminus B = A$.
+    \begin{gather}
+        x \in A \land x \notin B \leftrightarrow x \in A
+    \end{gather}
     
+    We define the set $A \cap B$.
+    \begin{gather}
+        A \cap B = \left\{x: x \in A, x \in B\right\}
+    \end{gather}
+
+    We can substtute in the equivalence (1.10) into (1.11).
+    \begin{gather}
+        A \cap B = \left\{x: x \in A \land x \notin B, x \in B\right\}\\
+        A \cap B = \left\{x: x \in A, x \notin B, x \in B\right\}
+    \end{gather}
+
+    This then gives us a contradiction. An element cannot both be in and not in set $B$. 
+    As such, we can equate the equivalence with an empty set.
+    \begin{gather}
+        A \cap B = \emptyset
+    \end{gather}
+    QED
 \end{proof}
+
+\subsection{Solution (d)}
+Prove $A \setminus B = \emptyset$ if and only if $A \subseteq B$.
+\begin{proof}
+    We can define the relationship $A \subseteq B$ and the set $A \setminus B$.
+    \begin{gather}
+        x \in A \implies x \in B\\
+        A \setminus B = \left\{x:x \in A, x \notin B\right\}
+    \end{gather}
+
+    We can substitute (1.15) into (1.16).
+    \begin{equation}
+        A \setminus B = \left\{x: x \in B, x \notin B\right\}
+    \end{equation}
+
+    This generates a contradiction, which we can use to turn the set into a null set.
+    \begin{equation}
+        A \setminus B = \emptyset
+    \end{equation}
+    QED
+\end{proof}
+
+\pagebreak
+\section{Exercise 1.6}
+Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.
+
+(a) Prove that $f(f^{-1}(B)) \subseteq B$.
+
+(b) Give an example where $f(f^{-1}(B)) \neq B$.
+
+(c) Prove that $A \subseteq f(f^{-1}(A))$.
+
+(b) Give an example where $A \neq f(f^{-1}(A))$.
+
+
+\pagebreak
+\section{Exercise 1.7}
+Suppose that f: $X \rightarrow Y$ and g: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
+
+
+\pagebreak
+\section{Exercise 1.8}
+The following are special cases of De Morgan's laws.\\
+(a) Prove that $(A \cap B)^c = A^c \cup B^c$. \\
+(b) Prove that $(A \cup B)^c = A^c \cap B^c$. 
+
+
+\pagebreak
+\section{Exercise 1.37}
+(a) Determine
+\[ \left\{1,3,5\right\} \cdot \left\{-3,0,1\right\} \]
+\
+(b) Give an example of sets $A$ and $B$ where $\sup(A\cdot B) \ne \sup(A) \cdot \sup(B)$.
 
 \end{document}
