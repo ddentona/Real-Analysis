@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.25)  16 FEB 2025 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.25)  17 FEB 2025 09:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -148,30 +148,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 [2
 
-] [3] [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
-
- []
-
-[7] [8] (./Problems.aux)
+] [3] [4] [5] [6] [7] [8] [9] (./Problems.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1805 strings out of 474116
- 25500 string characters out of 5743682
- 1934187 words of memory out of 5000000
- 24192 multiletter control sequences out of 15000+600000
+ 1809 strings out of 474116
+ 25616 string characters out of 5743682
+ 1936187 words of memory out of 5000000
+ 24196 multiletter control sequences out of 15000+600000
  565185 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,10n,65p,392b,182s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56i,14n,65p,392b,192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Problems.pdf (8 pages, 116403 bytes).
+Output written on Problems.pdf (9 pages, 118804 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

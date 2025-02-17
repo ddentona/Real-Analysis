@@ -133,20 +133,60 @@ Now we prove the second.
 Putting these together, we get the if and only if statement we were looking for. 
 
 \subsection{Solution (b)}
-We need to prove that $A \cap B = A$ if and only if $A \subseteq B$.
-We can just prove that $A \cap B = A$ if $A \subseteq B$ and $A \subseteq B$ if $A \cap B = A$.
-We begin with the first.
 \begin{proof}
-    (1) $A \subseteq B$ is given.
-    From this, we know from definitional that for any $a \in A$, $a \in B$.\\
+    (1) It is given that $A \subseteq B$. 
+    From this, we know from definitional that for any $a \in A$, $a \in B$.
     \[a \in A \implies a \in B\].\\
-    (2) We can also determine the existence of a set $C$ equal to $A \cap B$.
-    From the definition, we know that for any $c \in C$, $c \in A$ or $c \in B$.
-    \[c \in C \implies c \in A \text{or} c \in B\]
-    \\
-    (3) Plugging in the value from (1), we get 
+    (2) In what I call ``The 30s conjecture'' (iff a person is in their thirties then they are in their thirties and are in their thirties), we can say that if and only if $a \in A$ and $a \in A$, then $a \in A$.
+    \[A = \left\{a: a \in A, a \in A\right\}\]
+    (3) From step (1), we can put in the implication into part (2) that if and only if $a \in A$ and $a \in B$, then $a \in A$.
+    \[A = \left\{a: a \in A, a \in B\right\}\]
+    (4) We can rewrite that as $A \cap B = A$.
 \end{proof}
 
+\subsection{Solution (c)}
+Part 1: $A \cap B = \emptyset \implies A \setminus B = A$
+\begin{proof}
+    If $A \cap B = \emptyset$, that means that $a \notin B$ for any $a \in A$ and $a \notin A$ for any $a \in B$.
+    It also means that $A$ and $B$ are disjoint.
+    \begin{gather}
+        a \in B \implies a \notin A\\
+        a \in A \implies a \notin B
+    \end{gather}
+    
+    We can also define the set $A \setminus B$.
+    \begin{equation}
+        A \setminus B = \left\{ x: x \in A, x \notin B \right\}
+    \end{equation}
+    
+    We can set the falsehood to its equivalent.
+    \begin{equation}
+        A \setminus B = \left\{ x: x \in A, \overline{x \in B} \right\}
+    \end{equation}
 
+    The equivalent takes in (1.2).
+    \begin{equation}
+        A \setminus B = \left\{ x: x \in A, \overline{x \notin A} \right\}
+    \end{equation}
+
+    We can turn the double negative into a positive.
+    \begin{equation}
+        A \setminus B = \left\{ x: x \in A, x \in A \right\}
+    \end{equation}
+
+    We can then combine the two and compare then to the identity.
+    \begin{gather}
+        A \setminus B = \left\{ x: x \in A \right\}\\
+        A = \left\{x : x \in A\right\}\\
+        A \setminus B = A
+    \end{gather}
+    QED
+\end{proof}
+
+Part 2: $A \setminus B = A \implies A \cap B = \emptyset$
+\begin{proof}
+    Given: $A \setminus B = A$.
+    
+\end{proof}
 
 \end{document}
