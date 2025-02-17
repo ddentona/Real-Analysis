@@ -1,0 +1,152 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\begin{document}
+\tableofcontents
+\pagebreak
+\chapter{}
+\section{Exercise 1.1}
+Explain the error in the following ``proof'' that 2 = 1.\\
+Let $x = y$. Then
+\begin{align*}
+    x^2 &= xy\\
+    x^2 + y^2 &= xy - y^2\\
+    (x + y)(x - y) &= y(x - y)\\
+    x + y &= y\\
+    2y &= y\\
+    2 &= 1
+\end{align*}
+
+\subsection*{Solution}
+Between \((x + y)(x - y) = y(x - y)\) and \(x + y = y\), we divide by \(x - y\), which from the given, is equal to zero. Hence, the step involves dividing by zero, itself undefined and not allowed to be performed.
+
+\pagebreak
+\section{Exercise 1.2}
+Which of the following statements are true? Give a short explanation for each of your answers?\\
+(a) For every $n \in \mathbb{N}$ there is an $m \in \mathbb{N}$ such that $m > n$.\\
+(b) For every $m \in \mathbb{N}$ there is an $n \in \mathbb{N}$ such that $m > n$.\\
+(c) There is an $m \in \mathbb{N}$ such that for every $n \in \mathbb{N}$, $m \ge n$.\\
+(d) There is an $n \in \mathbb{N}$ such that for every $m \in \mathbb{N}$, $m \ge n$.\\
+(e) There is an $n \in \mathbb{R}$ such that for every $m \in \mathbb{R}$, $m \ge n$.\\
+(f) For every pair $x < y$ of integers, there is an integer $z$ such that $x < z < y$.\\
+(g) For every pair $x < y$ of real numbers, there is a real number $z$ such that $x < z < y$.
+
+\subsection{Solution (a) True}
+\begin{proof}
+    We begin with our given, which is that $n \in \mathbb{N}$. 
+    Natural numbers have a quality that they are ordered such that successive numbers are a distance of 1 apart.
+    Natural numbers are also unlimited in the direction of positive infinity.
+    This means that for every $n \in \mathbb{N}$, there is a greater natural number.
+    In other words, for every $n \in \mathbb{N}$, there exists an $m \in \mathbb{N}$ such that $m > n$.
+\end{proof}
+
+\subsection{Solution (b) False}
+To prove this false, we need but find a counterexample. 
+For the counterexample, we look at the number 1. $1 \in \mathbb{N}$. However, there is no $n \in \mathbb{N}$ such that $1 > n$. As such, it is false.
+
+\subsection{Solution (c) False}
+There is not maximum number in the natural numbers. For this to be true, it would have to contradict part (a), which has been proven. As such it is false.
+
+\subsection{Solution (d) True}
+The contrapositive of this is there is no $n \in \mathbb{N}$ such that for every $m \in \mathbb{N}$, $m < n$. Since there are infinitely many $\mathbb{R}$ with no upward bound, there will be no number $n \in \mathbb{N}$ such that $m < n$ for every $m \in \mathbb{N}$. This makes it true.
+
+\subsection{Solution (e) True}
+The contrapositive of this is there is no $n \in \mathbb{R}$ such that for every $m \in \mathbb{R}$, $m < n$. Since there are infinitely many $\mathbb{R}$ with no upward bound, there will be no number $n \in \mathbb{R}$ such that $m < n$ for every $m \in \mathbb{R}$. This makes it true.
+
+\subsection{Solution (f) False}
+If $x$ and $y$ are adjacent, like 0 and 1, then the number $z$ such that $x < z < y$ would have to be of distance less than 1 from the two adjacent numbers. This contradicts the principle of integers, which says that all integers are of distance 1 from their adjacent numbers. The statement is false.
+
+\subsection{Solution (g) True}
+There are considered to be infinitely many real numbers between two other real numbers.
+This means that for any $x, y \in \mathbb{R}$, there does exist $z \in \mathbb{R}$ such that $x < z < y$. 
+
+\pagebreak
+\section{Exercise 1.3}
+If $A$ and $B$ are two boxes (possibly with things inside), describe the following in terms of boxes:
+\begin{align*}
+    &(a) A \setminus B 
+    &(b) \mathcal{P}(A)
+    &&(c) \left| A \right|
+\end{align*} 
+
+\subsection{Solution (a)}
+$A \setminus B$ means the set of objects in A not in B. 
+$A \setminus B = \{x: x \in A \text{and} x \notin B\}$. 
+In terms of boxes, this would mean the box with everything that is in A but not in B.
+
+\subsection{Solution (b)}
+$\mathcal{P}(A)$ or the \textit{power set} of A means the set of all subsets of A.
+\(\mathcal{P}(A) = \{X: X \subseteq B\}\).
+In terms of boxes, this would be the box containing every box containing a combination of only different objects contained in $A$. 
+
+\subsection{Solution (c)}
+$\left| A \right|$ or the cardinatity of A means the count of all elements in $A$.
+In terms of boxes, this would be the number of objects contained in the box $A$.
+
+\pagebreak
+\section{Exercise 1.4}
+If $A_1, A_2, A_3, \dots, A_n$ are all boxes (possibly with things inside), describe the following in terms of boxes:
+\begin{align*}
+    &(a) \overunderset{n}{i = 1}{\bigcup} A_i = A_1 \cup A_2 \cup \dots \cup A_n
+    &(b) \overunderset{n}{i = 1}{\bigcap} A_i = A_1 \cap A_2 \cap \dots \cap A_n
+\end{align*}
+
+\subsection{Solution (a)}
+A box containing all the objects in each of the boxes $A_1, A_2, A_3, \dots, A_n$.
+
+\subsection{Solution (b)}
+A box containing each object that is in every one of the boxes $A_1, A_2,$ $A_3, \dots, A_n$.
+
+\pagebreak
+\section{Exercise 1.5}
+Prove that each of the following holds for any sets $A$ and $B$.\\
+(a) $A \cup B = A$ if and only if $B \subseteq A$.\\
+(b) $A \cap B = A$ if and only if $A \subseteq B$.\\
+(c) $A \setminus B = A$ if and only if $A \cap B = \emptyset$.\\
+(d) $A \setminus B = \emptyset$ if and only if $A \subseteq B$.
+
+\subsection{Solution (a)}
+We have to prove $A \cup B = A$ if and only if $B \subseteq A$.
+To prove this, we must prove that $A \cup B = A \implies B \subseteq A$ and $B \subseteq A \implies A \cup B = A$.
+We begin with the first. 
+\begin{proof}
+    We know that $A \cup B = A$.
+    This means that for any $b \in B$ or $b \in A$, $b \in A$. 
+    Taking the first half of this, we get $b \in B \implies b \in A$.
+    This can be rewritten as $B \subseteq A$. 
+    QED
+\end{proof}
+
+Now we prove the second.
+\begin{proof}
+    We know that $B \subseteq A$.
+    This can be written that $b \in A$ for every $b \in B$, or $\frac{b \in B}{b \in A}$.\\
+    From identity, we also know that $b \in A$ for every $b \in A$, or $\frac{b \in A}{b \in A}$.\\
+    Putting these together, we get $b \in A$ for every $b \in A$ or $b \in B$, rewriten as $\frac{(b \in A) \vee (b \in B)}{b \in A}$.\\
+    Rewriting this in sets, we get $\frac{\{b : b \in A \text{ or } b \in B\}}{\{b: b \in A\}}$.\\
+    Putting this in implies and sets notation, we finally end up with \(A \cup B = A\). \\
+    QED
+\end{proof}
+Putting these together, we get the if and only if statement we were looking for. 
+
+\subsection{Solution (b)}
+We need to prove that $A \cap B = A$ if and only if $A \subseteq B$.
+We can just prove that $A \cap B = A$ if $A \subseteq B$ and $A \subseteq B$ if $A \cap B = A$.
+We begin with the first.
+\begin{proof}
+    (1) $A \subseteq B$ is given.
+    From this, we know from definitional that for any $a \in A$, $a \in B$.\\
+    \[a \in A \implies a \in B\].\\
+    (2) We can also determine the existence of a set $C$ equal to $A \cap B$.
+    From the definition, we know that for any $c \in C$, $c \in A$ or $c \in B$.
+    \[c \in C \implies c \in A \text{or} c \in B\]
+    \\
+    (3) Plugging in the value from (1), we get 
+\end{proof}
+
+
+
+\end{document}
