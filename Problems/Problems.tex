@@ -233,20 +233,32 @@ Prove $A \setminus B = \emptyset$ if and only if $A \subseteq B$.
 
 \pagebreak
 \section{Exercise 1.6}
-Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.
+Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
+(a) Prove that $f(f^{-1}(B)) \subseteq B$.\\
+(b) Give an example where $f(f^{-1}(B)) \neq B$.\\
+(c) Prove that $A \subseteq f(f^{-1}(A))$.\\
+(d) Give an example where $A \neq f(f^{-1}(A))$.
 
-(a) Prove that $f(f^{-1}(B)) \subseteq B$.
+\subsection{Solution (a)}
+\begin{proof}
+    We can set a reflexive truth involving $B$.
+    \begin{equation}
+        B \subseteq B
+    \end{equation}
 
-(b) Give an example where $f(f^{-1}(B)) \neq B$.
-
-(c) Prove that $A \subseteq f(f^{-1}(A))$.
-
-(b) Give an example where $A \neq f(f^{-1}(A))$.
-
+    Since $f: X \rightarrow Y$ and $B \subseteq Y$, we can say that $B$ is part of the codomain of $f$.
+    We can as such apply the inverse function of $f$ to both sides of the reflexive property.
+    \begin{equation}
+        f^{-1}(B) \subseteq f^{-1}(B)
+    \end{equation} 
+\end{proof}
 
 \pagebreak
 \section{Exercise 1.7}
-Suppose that f: $X \rightarrow Y$ and g: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
+Suppose that $f$: $X \rightarrow Y$ and $g$: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
+
+\section{Solution}
+
 
 
 \pagebreak
