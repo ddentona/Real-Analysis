@@ -236,28 +236,76 @@ Prove $A \setminus B = \emptyset$ if and only if $A \subseteq B$.
 Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
 (a) Prove that $f(f^{-1}(B)) \subseteq B$.\\
 (b) Give an example where $f(f^{-1}(B)) \neq B$.\\
-(c) Prove that $A \subseteq f(f^{-1}(A))$.\\
-(d) Give an example where $A \neq f(f^{-1}(A))$.
+(c) Prove that $A \subseteq f^{-1}(f(A))$.\\
+(d) Give an example where $A \neq f^{-1}(f(A))$.
 
 \subsection{Solution (a)}
 \begin{proof}
     We can set a reflexive truth involving $B$.
     \begin{equation}
-        B \subseteq B
+        B = B
     \end{equation}
 
     Since $f: X \rightarrow Y$ and $B \subseteq Y$, we can say that $B$ is part of the codomain of $f$.
     We can as such apply the inverse function of $f$ to both sides of the reflexive property.
     \begin{equation}
-        f^{-1}(B) \subseteq f^{-1}(B)
-    \end{equation} 
+        f^{-1}(B) = f^{-1}(B)
+    \end{equation}
+
+    Lastly, we can apply the function $f$ to both sides, which may cancel out on the right side. 
+    Since there may be some values in $b \in B$ for which $f^{-1}(B)$ is undefined or does not exist, we can no longer set it as an equality. However, se can set it as a subset equality.
+    \begin{equation}
+        f(f^{-1}(B)) \subseteq B
+    \end{equation}
+
+    QED
 \end{proof}
+
+\subsection{Solution (b)}
+\begin{equation}
+    f(x) = \frac{1}{x}
+\end{equation}
+
+\pagebreak
+\subsection{Solution (c)}
+\begin{proof}
+    We will first define the function $f$ and the function $f^{-1} \circ f$.
+    \begin{gather}
+        f(A) = \left\{f(x) | x \in A\right\}\\
+        f^{-1}(f(A)) = \left\{f^{-1}(x) | x \in f(A)\right\}
+    \end{gather}
+
+    From this, we ca assume the existence of a generic element $x$ that is an element of $A$. 
+    \begin{equation}
+        x \in A
+    \end{equation}
+
+    Since $x \in A$, we can then apply the function $f$ to both sides.
+    \begin{equation}
+        f(x) \in f(A)
+    \end{equation}
+
+    We can then apply the definition of the image to this.
+    \begin{equation}
+        x \in f^{-1}(f(A))
+    \end{equation}
+
+    Since $x$ is a generic element of $A$, we have shown that every element of $A$ is in $f^{-1}(f(A))$.
+    \begin{gather}
+        A \subseteq f^{-1}(f(A))
+    \end{gather}
+
+    QED
+\end{proof}
+
+\subsection{Section (d)}
+\[f(x) = \sqrt{x}\]
 
 \pagebreak
 \section{Exercise 1.7}
 Suppose that $f$: $X \rightarrow Y$ and $g$: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
 
-\section{Solution}
+\subsection{Solution}
 
 
 
@@ -266,6 +314,9 @@ Suppose that $f$: $X \rightarrow Y$ and $g$: $Y \rightarrow X$  are functions an
 The following are special cases of De Morgan's laws.\\
 (a) Prove that $(A \cap B)^c = A^c \cup B^c$. \\
 (b) Prove that $(A \cup B)^c = A^c \cap B^c$. 
+
+\subsection{Solution (a)}
+Prove that $(A \cap B)^c = A^c \cup B^c$.
 
 
 \pagebreak
