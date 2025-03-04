@@ -133,6 +133,7 @@ Now we prove the second.
 Putting these together, we get the if and only if statement we were looking for. 
 
 \subsection{Solution (b)}
+Part 1: $A \subseteq B \implies A \cap B = A$
 \begin{proof}
     (1) It is given that $A \subseteq B$. 
     From this, we know from definitional that for any $a \in A$, $a \in B$.
@@ -143,6 +144,42 @@ Putting these together, we get the if and only if statement we were looking for.
     \[A = \left\{a: a \in A, a \in B\right\}\]
     (4) We can rewrite that as $A \cap B = A$.
     QED
+\end{proof}
+
+\newcommand{\andtxt}{\text{ and }}
+Part 2: $A \cap B = A \implies A \subseteq B$
+\begin{proof}
+    Suppose that $A \cap B = A$.
+    We can establish definitions for this.
+    \begin{gather}
+        A \cap B = \left\{x: x \in A \andtxt x \in B\right\}
+    \end{gather}
+
+    From the transistive property, we can continue.
+    \begin{equation}
+        A = \left\{x: x \in A \andtxt x \in B\right\}
+    \end{equation}
+
+    We can then establish the reflexive definition for the set A and apply that to the above equation with the transistive property.
+    \begin{gather}
+        A = \left\{ x: x \in A \right\}\\
+        \left\{ x: x \in A \right\} = \left\{x: x \in A \andtxt x \in B\right\}
+    \end{gather}
+
+    We can use this to define a generic element $x$.
+    \begin{gather}
+        x \in A \Leftrightarrow x \in A \andtxt x \in B\\
+        x \in A \implies x \in A \andtxt x \in B
+    \end{gather}
+
+    This can be separated into two implications.
+    \begin{gather}
+        x \in A \implies x \in A\\
+        x \in A \implies x \in B
+    \end{gather}
+
+    We can turn the second point into $A \subseteq B$.\\
+    Q.E.D.
 \end{proof}
 
 \subsection{Solution (c)}
@@ -211,7 +248,7 @@ Part 2: $A \setminus B = A \implies A \cap B = \emptyset$
 \end{proof}
 
 \subsection{Solution (d)}
-Prove $A \setminus B = \emptyset$ if and only if $A \subseteq B$.
+Part 1: $A \subseteq B \implies A \setminus B = \emptyset$.
 \begin{proof}
     We can define the relationship $A \subseteq B$ and the set $A \setminus B$.
     \begin{gather}
@@ -229,6 +266,31 @@ Prove $A \setminus B = \emptyset$ if and only if $A \subseteq B$.
         A \setminus B = \emptyset
     \end{equation}
     QED
+\end{proof}
+
+Part 2: $A \setminus B = \emptyset \implies A \subseteq B$.
+\begin{proof}[Proof by Contradiction]
+    For the sake of contradiction, we assume that $A \nsubseteq B$.
+    We also have as given, that $A \setminus B = \emptyset$.
+    \begin{gather}
+        A \setminus B = \emptyset\\
+        A \setminus B = \left\{x: x \in A, x \notin B\right\}
+    \end{gather}
+    We can infer from this the existence of an element $x$.
+    \begin{gather}
+        x \in A\\
+        x \notin B
+    \end{gather}
+    Based on the definition, it would follow that $x$ would be an element of $A \setminus B$.
+    We can apply a transistive property to this.
+    \begin{gather}
+        x \in A \setminus B\\
+        x \in \emptyset
+    \end{gather}
+    Since $\emptyset$ has no elements, it contradicts its definition to say that $x$ is an element of $\emptyset$.
+    As such, our assumtion cannot be true. 
+    This valudates that $A \setminus B = \emptyset \implies A \subseteq B$.\\
+    Q.E.D.
 \end{proof}
 
 \pagebreak
@@ -376,6 +438,65 @@ The following are special cases of De Morgan's laws.\\
 
 \subsection{Solution (a)}
 Prove that $(A \cap B)^c = A^c \cup B^c$.
+\begin{proof}[Proof by Truth Table]
+    We will have all the following conditions apply for whether a given element $x$ is part of it.
+    \begin{center}
+        \begin{tabular}{| c | c | c | c |}
+            \hline
+            $A$ &$B$    &$A \cap B$ &$(A \cap B)^c$\\
+            \hline
+            T   &T  &T  &F\\
+            T   &F  &F  &T\\
+            F   &T  &F  &T\\
+            F   &F  &F  &T\\
+            \hline
+        \end{tabular}
+        \begin{tabular}{| c | c | c | c | c | c | c |}
+            \hline
+            $A$ &$B$    &$A^c$  &$B^c$  &$A^c \cup B^c$\\
+            \hline
+            T   &T  &F  &F  &F\\
+            T   &F  &F  &T  &T\\
+            F   &T  &T  &F  &T\\
+            F   &F  &T  &T  &T\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Since the columns of $(A \cap B)^c$ and $A^c \cup B^c$ are the same for the same values of $A$ and $B$ in their respective columns, we can conclude that $(A \cap B)^c = A^c \cup B^c$.\\
+    Q.E.D.
+\end{proof}
+
+\subsection{Solution (b)}
+Prove that $(A \cup B)^c = A^c \cap B^c$. 
+\begin{proof}[Proof by Truth Table]
+    We will have all the following conditions apply for whether a given element $x$ is part of it.
+    \begin{center}
+        \begin{tabular}{| c | c | c | c |}
+            \hline
+            $A$ &$B$    &$A \cup B$ &$(A \cup B)^c$\\
+            \hline
+            T   &T  &T  &F\\
+            T   &F  &T  &F\\
+            F   &T  &T  &F\\
+            F   &F  &F  &T\\
+            \hline
+        \end{tabular}
+        \begin{tabular}{| c | c | c | c | c | c | c |}
+            \hline
+            $A$ &$B$    &$A^c$  &$B^c$  &$A^c \cap B^c$\\
+            \hline
+            T   &T  &F  &F  &F\\
+            T   &F  &F  &T  &F\\
+            F   &T  &T  &F  &F\\
+            F   &F  &T  &T  &T\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Since the columns of $(A \cup B)^c$ and $A^c \cap B^c$ are the same for the same values of $A$ and $B$ in their respective columns, we can conclude that $(A \cup B)^c = A^c \cap B^c$.\\
+    Q.E.D.
+\end{proof}
 
 
 \pagebreak
