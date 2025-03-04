@@ -1,8 +1,8 @@
-PWD /Users/dentonaingworth/Documents/Real Analysis/Problems
+PWD /Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/dentonaingworth/Documents/Real Analysis/Problems/Problems.tex
+INPUT /Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex
 OUTPUT Problems.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls

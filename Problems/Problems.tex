@@ -306,7 +306,66 @@ Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
 Suppose that $f$: $X \rightarrow Y$ and $g$: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
 
 \subsection{Solution}
+\newcommand{\id}{\text{id}}
+First, we have to prove that $f$ must be a one-to-one function.
+\begin{proof}
+    First, we know that $g \circ f(x) = g(f(x)) = x$. 
+    Suppose that we have two values $x, y \in X$ and that they have the same value when the function $f$ is applied to them.
+    \begin{equation}
+        f(x) = f(y)
+    \end{equation} 
+    We can use the function $g$ on both sides of this.
+    \begin{equation}
+        g(f(x)) = g(f(y))
+    \end{equation}
+    Since $g \circ f = \id$, we replace this.
+    \begin{equation}
+        \id(x) = \id(y)
+    \end{equation}
+    This is equivalent to our ending point.
+    \begin{equation}
+        x = y
+    \end{equation}
+    Putting it all together, we get an implication.
+    \begin{equation}
+        f(x) = f(y) \implies x = y
+    \end{equation}
+    Q.E.D.
+\end{proof}
 
+Now, we have to prove that $g$ is an $onto$ function.
+As a reminder, a function $f: A \rightarrow B$ is onto (or surjective) if for every $b \in B$, there exists some $a \in A$ such that $f(a) = b$.
+\begin{proof}[Proof by Contradiction]
+    For contradiction, suppose that $\exists x \in X$ such that for $\forall y \in Y$, $g(y) \ne x$.
+    The given information we have is that $g \circ f$ is the identity function $\id$.
+    By its very nature, $\id$ is always bijective. 
+    From that, we can establish that it applies to our value $x$, as does its equivalent.
+    \begin{gather}
+        \exists x \in X: x = \id(x)\\
+        \exists x \in X: x = g(f(x))
+    \end{gather}
+    We can apply this to the given inequality.
+    \begin{gather}
+        g(y) \ne x\\
+        g(y) \ne g(f(x))
+    \end{gather}
+    Since $f: X \to Y$ and $x \in X$, we can establish that $\exists y \in Y: y = f(x)$.
+    \begin{equation}
+        \exists y \in Y: f(x) = y
+    \end{equation}
+    We can take the final contradiction assumption, creating new values appropriately and apply substitution to it.
+    Since the value of $y$ can be any value in $Y$, that value could be $f(x)$, which is established to exist.
+    \begin{gather}
+        \exists x \in X: g(y) \ne x\\
+        \exists x \in X: g(f(x)) \ne x\\
+        \exists x \in X: \id(x) \ne x
+    \end{gather}
+    This means that $x$ is not equal to its identity function.
+    This contradicts the sheer fact of $\id(x) = x$.
+    This shows that $\id(x) = x$ can only be true if our initial assumption is false.
+    This proves our point by contradiction.\\
+    Q.E.D.
+\end{proof}
 
 
 \pagebreak
