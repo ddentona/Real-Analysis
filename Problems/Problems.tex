@@ -3,7 +3,6 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 
-
 \begin{document}
 \tableofcontents
 \pagebreak
@@ -498,6 +497,7 @@ Prove that $(A \cup B)^c = A^c \cap B^c$.
     Q.E.D.
 \end{proof}
 
+\pagebreak
 \section{Exercise 1.9}
 (a) Prove that $\sqrt{3}$ is irrational. \\
 (b) What goes wrong when you try to adapt your argument from  part (a) to show that $\sqrt{4}$ is irrational (which is absurd)? \\
@@ -554,13 +554,55 @@ Proof that $\sqrt{3}$ is irrational.
 \end{proof}
 
 \subsection{Solution (c)}
-\begin{proof}
+First we prove they are both either rational or irrational.
+\begin{proof}[Proof by Contradiction]
     We first consider the product of the two.
     \begin{align}
         (\sqrt{3} + \sqrt{5})(\sqrt{3} - \sqrt{5})
             &=  3 - 5
             =   -2
     \end{align}
+
+    We can clearly see that the product of the two is a rational number. 
+    Now, suppose (for contradiction purposes) that one and only one of two multiplied numbers is rational. 
+    That number would be represented by a fraction of natural numbers $\frac{p}{q}$. 
+    The other number would be irrational, and it would be represented be represented by $n$.
+    \begin{gather}
+        n*\frac{p}{q} = -2\\
+        n * p = -2 * q\\
+        n = \frac{-2*q}{p}
+    \end{gather}
+
+    Since $p$ and $q$ are both natural numbers, that means that $\frac{q}{p}$ is a rational number. 
+    Since rationals are closed under multiplication, this means that $n$ is a rational number.
+    This contradicts our initial assumption.
+    This means that $\sqrt{3} + \sqrt{5} \in \mathbb{Q} \iff \sqrt{3} - \sqrt{5} \in \mathbb{Q}$.
+\end{proof}
+
+Now, we prove that neither are rational.
+\begin{proof}[Proof by Contradiction]
+    We will assume for contradiction purposes that both are rational.
+    \begin{gather}
+        \sqrt{3} + \sqrt{5} \in \mathbb{Q}\\
+        \sqrt{3} - \sqrt{5} \in \mathbb{Q}
+    \end{gather}
+
+    Since rational numbers are closed under addition, we can add the two together and say that the result is rational.
+    \begin{gather}
+        (\sqrt{3} - \sqrt{5}) + (\sqrt{3} + \sqrt{5}) = 2\sqrt{3} \rightarrow
+        2\sqrt{3} \in \mathbb{Q}
+    \end{gather}
+
+    Since 2 is rational and rationals are closed under division (except for 0), then we can say that our result divided by 2 is rational.
+    \begin{gather}
+        \frac{2\sqrt{3}}{2} = \sqrt{3} \rightarrow
+        \sqrt{3} \in \mathbb{Q}
+    \end{gather}
+
+    This is a contradiction of an established statement. 
+    This means that our initial statement is false. 
+    Combining this with the fact that $\sqrt{3} + \sqrt{5} \in \mathbb{Q} \iff \sqrt{3} - \sqrt{5} \in \mathbb{Q}$, we can say that $\sqrt{3} + \sqrt{5} \notin \mathbb{Q}$ and $\sqrt{3} - \sqrt{5} \notin \mathbb{Q}$.\\
+    QED
 \end{proof}
 
 \pagebreak
@@ -568,7 +610,19 @@ Proof that $\sqrt{3}$ is irrational.
 Prove that the multiplicative identity in a field is unique. 
 
 \subsection{Solution}
-
+We'll prove this by contradiction.
+\begin{proof}[Proof by Contradiction]
+    Suppose that the field has two multiplicative identity elements. 
+    The first is 1.
+    Suppose that we call the second one $h$ and that $h \neq 1$.
+    For $h$ to be a multiplicative identity, it would mean that $h \in \mathbb{F}$ and for all $a \in \mathbb{F}$, $a \cdot h = a$.
+    Suppose we were to multiply our two multiplicative identities together.
+    Due to its nature covered in the identity law, $h \cdot 1 = h$.
+    However, our earlier statement would lead us to believe that $h \cdot 1 = 1$.
+    This would only be possible if $h = 1$.
+    This would give us a contradiction, which would mean that the multiplicative identity would be unique.
+    QED
+\end{proof}
 
 \pagebreak
 \section{Problem 1.11}
@@ -576,13 +630,15 @@ Given an ordered field $\mathbb{F}$, recall that we defined the positive element
 
 (i) If $a, b \in P$, then $a + b \in P$ and $a \cdot b \in P$;  
 
-(ii) If $a \in F$ and $a \ne 0$, then either $a \in P$ or $-a \in P$, but not  both. \\
-(a) Give an example of some $P_1 \subseteq R$ that satisfies (i) but not (ii).\\
-(b) Give an example of some $P_2 \subseteq R$ that satisfies (ii) but not (i). 
+(ii) If $a \in \mathbb{F}$ and $a \ne 0$, then either $a \in P$ or $-a \in P$, but not  both. \\
+(a) Give an example of some $P_1 \subseteq \mathbb{R}$ that satisfies (i) but not (ii).\\
+(b) Give an example of some $P_2 \subseteq \mathbb{R}$ that satisfies (ii) but not (i). 
 
 \subsection{Solution (a)}
+For the set of integers in the range $[-\infty,\infty]$, (i) is satisfied, but not (ii). 
 
 \subsection{Solution (b)}
+For the set of integers in the range $[1,2]$, (ii) is satisfied, but not (i). 
 
 
 \pagebreak
@@ -593,8 +649,29 @@ Assume that $\mathbb{F}$ is an ordered field and $a, b, c, d \in \mathbb{F}$ wit
 Note whenever you use an axiom. 
 
 \subsection{Solution (a)}
+\begin{proof}
+    We know that if $a<b$ and $c<d$, then $b - a \in P$ and $d - c \in P$.
+    By the order axiom, 
+    \begin{gather}
+        (b - a) + (d - c) \in P\\
+        (b + d) - (a + c) \in P
+    \end{gather}
+
+    By the definition of the $<$ operator,
+    \begin{gather}
+        a + c < b + d
+    \end{gather}
+    QED
+\end{proof}
 
 \subsection{Solution (b)}
+Counterexample:
+\begin{gather}
+    a = -1; b = 1 \implies a < b\\
+    c = -2; d = 2 \implies c < d\\
+    a * c = 2; b * d = 2 \implies ac = bd
+\end{gather}
+This satisfies the case of a counterexample.
 
 
 \pagebreak
@@ -605,6 +682,14 @@ Let $a, b$ and $\varepsilon$ be elements of an ordered field. \\
 Note whenever you use an axiom. 
 
 \subsection{Solution (a)}
+Case 1: $a < b$
+\begin{proof}
+    Given:
+    \begin{gather}
+        0 < \varepsilon\\
+        b < b + \varepsilon
+    \end{gather}
+\end{proof}
 
 \subsection{Solution (b)}
 
