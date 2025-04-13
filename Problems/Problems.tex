@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{multicol}
 
 \begin{document}
 \tableofcontents
@@ -328,6 +329,7 @@ Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
 \end{equation}
 
 \pagebreak
+
 \subsection{Solution (c)}
 \begin{proof}
     We will first define the function $f$ and the function $f^{-1} \circ f$.
@@ -366,7 +368,7 @@ Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
 \section{Exercise 1.7}
 Suppose that $f$: $X \rightarrow Y$ and $g$: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
 
-\subsection{Solution}
+\subsection*{Solution}
 \newcommand{\id}{\text{id}}
 First, we have to prove that $f$ must be a one-to-one function.
 \begin{proof}
@@ -609,7 +611,7 @@ Now, we prove that neither are rational.
 \section{Problem 1.10}
 Prove that the multiplicative identity in a field is unique. 
 
-\subsection{Solution}
+\subsection*{Solution}
 We'll prove this by contradiction.
 \begin{proof}[Proof by Contradiction]
     Suppose that the field has two multiplicative identity elements. 
@@ -682,17 +684,184 @@ Let $a, b$ and $\varepsilon$ be elements of an ordered field. \\
 Note whenever you use an axiom. 
 
 \subsection{Solution (a)}
-Case 1: $a < b$
-\begin{proof}
-    Given:
+\begin{proof}[Proof by Contradiction]
+    Suppose that $b < a$.
+    We also know that $\varepsilon > 0$.
+    These both would themselves mean that $a - b \in P$ and $\varepsilon \in P$.
+    We can put the two of these together by the order axiom, as well as establish some other things.
     \begin{gather}
-        0 < \varepsilon\\
-        b < b + \varepsilon
+        a - b + \varepsilon \in P\\
+        a - b > 0
     \end{gather}
+    It could be that $\varepsilon = \frac{a - b}{2}$.
+    Since $\varepsilon > 0$, this is applicable.
+    Our given information tells us about further relationships.
+    \begin{gather}
+        a < b + \varepsilon
+    \end{gather}
+    By the order axiom.
+    \begin{gather}
+        b + \varepsilon - a \in P
+    \end{gather}
+    By the associative law.
+    \begin{gather}
+        \varepsilon - (a - b) \in P
+    \end{gather}
+    By the order axiom.
+    \begin{gather}
+        a - b < \varepsilon
+    \end{gather}
+    By an equivalency.
+    \begin{gather}
+        a - b < \frac{a - b}{2}
+    \end{gather}
+    This is a contradiction of itself.\\
+    QED
 \end{proof}
 
 \subsection{Solution (b)}
+\begin{proof}
+    We have a known equation.
+    \begin{equation}
+        |a - b| < \varepsilon
+    \end{equation}
 
+    By Note 1.11.g.
+    \begin{equation}
+        -\varepsilon < a - b < \varepsilon
+    \end{equation}
+
+    This gets split into two equations.
+    \begin{gather}
+        a - b < \varepsilon\\
+        -\varepsilon < a - b
+    \end{gather}
+
+    By Note 1.9.a, adding either $b$ or $b + \varepsilon$, respectively.
+    \begin{gather}
+        a < b + \varepsilon\\
+        b < a + \varepsilon
+    \end{gather}
+
+    We can apply part (a).
+    \begin{gather}
+        a \le b\\
+        b \le a
+    \end{gather}
+
+    There is only case where this does not self-contradict.
+    \begin{equation}
+        a = b
+    \end{equation}
+    QED
+\end{proof}
+
+
+\pagebreak
+\section{Exercise 1.14}
+Prove that the equality $\left|ab\right| = \left|a\right|\cdot\left|b\right|$ holds for  all real numbers a and b. 
+
+\subsection*{Solution}
+\begin{proof}[Proof by Cases]
+    \underline{Case 1: $a, b \in P$}
+    \begin{gather}
+        a = |a|\\
+        b = |b|\\
+        \left|ab\right| = a * b = ab\\
+        \left|a\right| \cdot \left|b\right| = a \cdot b = ab
+    \end{gather}
+    As desired.
+
+    \underline{Case 2: $a \in P, b \notin P$}
+    This applies equally for $a \notin P, b \in P$.
+    \begin{gather}
+        |a| = a\\
+        |b| = -b\\
+        |a|*|b| = a * (-b) = -ab
+    \end{gather}
+
+    Since $a > 0$ and $b < 0$:
+    \begin{gather}
+        ab < 0\\
+        |ab| = -ab
+    \end{gather}
+    As desired.
+
+    \underline{Case 3: $a, b \notin P$}
+    \begin{gather}
+        |a| = -a\\
+        |b| = -b\\
+        |a||b| = ab\\
+    \end{gather}
+
+    Since $a < 0$ and $b < 0$:
+    \begin{gather}
+        ab > 0\\
+        |ab| = ab
+    \end{gather}
+    As desired.
+
+    QED
+\end{proof}
+
+\pagebreak
+\section{Exercise 1.15}
+For each of the following, find all numbers $x$ which satisfy the expression. 
+
+\begin{multicols}{2}
+    \begin{itemize}
+        \item[(a)] $\left|x - 4\right| = 7$
+        \item[(b)] $\left|x - 4\right| < 7$
+        \item[(c)] $\left|x + 2\right| < 7$
+        \item[(d)] $\left|x - 1\right| + \left|x - 2\right| > 1$
+        \item[(e)] $\left|x - 1\right| + \left|x + 1\right| > 1$
+        \item[(f)] $\left|x - 4\right| > 1$
+        \item[(g)] $\left|x - 1\right| \cdot \left|x + 1\right| = 0$
+        \item[(h)] $\left|x - 1\right| \cdot \left|x + 2\right| = 3$
+    \end{itemize}
+\end{multicols}
+
+\subsection{Solution (a)}
+
+\pagebreak
+\section{Exercise 1.16}
+Let $\max\{x, y\}$ denote the maximum of the real numbers $x$ and $y$, and let $\min\{x, y\}$ denote the minimum. 
+For example, $\min\{-1, 4\} = -1$, and also $\min\{-1, -1\} = 1$. 
+Prove that
+\begin{gather*}
+    \max\{x,y\} = \frac{x + y + \left|y - x\right|}{2}
+    \andtxt
+    \min\{x,y\} = \frac{x + y - \left|y - x\right|}{2}
+\end{gather*}
+
+Then, find the formula for $\max\{x,y,z\}$ and $\min\{x,y,z\}$.
+
+\subsection*{Solution}
+
+\pagebreak
+\section{Exercise 1.17}
+Prove that if $a, b \in R$ and $0 < a < b$, then  $a^n < b^n$ for any positive integer n. 
+
+\subsection*{Solution}
+
+\pagebreak
+\section{Exercise 1.18}
+Prove that if $a_1, a_2,\dots,a_n$ are real numbers, then 
+\begin{gather*}
+    \left| a_1 + a_2 + \dots + a_n \right| \le \left|a_1\right| + \left|a_2\right| + \dots + \left|a_n\right|
+\end{gather*}
+
+\subsection*{Solution}
+
+\pagebreak
+\section{Exercise 1.19}
+Prove that $\overunderset{n}{k = 1}{\Sigma}\frac{1}{k(k + 1)} = \frac{n}{n + 1}$ for every natural number n. 
+
+\subsection*{Solution}
+
+\pagebreak
+\section{Exercise 1.20}
+Determine which natural numbers, $n$, have the  property that $\sqrt{n}$ is irrational. 
 
 \pagebreak
 \section{Exercise 1.37}

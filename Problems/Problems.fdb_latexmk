@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1744075749.26061 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" "Problems.pdf" "Problems" 1744075749.60761 0
-  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" 1744075749.05978 27200 feccb22ccbc3bce8bc65e530ebfc0de5 ""
+["pdflatex"] 1744505975.59806 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" "Problems.pdf" "Problems" 1744505975.93126 0
+  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" 1744505975.04077 31749 0f50935c6d07f94982009f33ac0a0bdd ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -44,13 +44,14 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/report.cls" 1705352648 23203 f5d913095ece2233436f0e628619cd37 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size12.clo" 1705352648 8449 f07039d8e4e89f21078d9b5137579bfc ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1708463273 30006 3d512c0edd558928ddea1690180ef77e ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty" 1686341992 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727305248.69286 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1727305230 8221424 9bdbcc07e109911bb30a75dc8990d89e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Problems.aux" 1744075749.57632 5228 e300b4ac08863635386339dd46c0cc3d "pdflatex"
-  "Problems.tex" 1744075749.05978 27200 feccb22ccbc3bce8bc65e530ebfc0de5 ""
-  "Problems.toc" 1744075749.57696 3151 fce58a2885b368f61f580e1c14ea266e "pdflatex"
+  "Problems.aux" 1744505975.90003 5863 14d09d29556daa23e00233272530fd88 "pdflatex"
+  "Problems.tex" 1744505975.04077 31749 0f50935c6d07f94982009f33ac0a0bdd ""
+  "Problems.toc" 1744505975.90079 3540 74c030a07171791bf5a7b4a3a0e1998f "pdflatex"
   (generated)
   "Problems.aux"
   "Problems.log"
