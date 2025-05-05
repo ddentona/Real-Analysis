@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1744505975.59806 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" "Problems.pdf" "Problems" 1744505975.93126 0
-  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" 1744505975.04077 31749 0f50935c6d07f94982009f33ac0a0bdd ""
+["pdflatex"] 1746458367.19418 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" "Problems.pdf" "Problems" 1746458367.55388 0
+  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Problems/Problems.tex" 1746458366.99594 37241 766e9b84af0976f7d49c399ab8bc7de4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -8,7 +8,9 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -49,9 +51,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727305248.69286 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1727305230 8221424 9bdbcc07e109911bb30a75dc8990d89e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Problems.aux" 1744505975.90003 5863 14d09d29556daa23e00233272530fd88 "pdflatex"
-  "Problems.tex" 1744505975.04077 31749 0f50935c6d07f94982009f33ac0a0bdd ""
-  "Problems.toc" 1744505975.90079 3540 74c030a07171791bf5a7b4a3a0e1998f "pdflatex"
+  "Problems.aux" 1746458367.52224 6291 ba782e8171ccd34ef2179d56e6e31860 "pdflatex"
+  "Problems.tex" 1746458366.99594 37241 766e9b84af0976f7d49c399ab8bc7de4 ""
+  "Problems.toc" 1746458367.52302 3844 83678d9624fea65a1b9651e812e4e967 "pdflatex"
   (generated)
   "Problems.aux"
   "Problems.log"

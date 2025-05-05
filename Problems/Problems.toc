@@ -45,10 +45,13 @@
 \contentsline {subsection}{\numberline {1.13.2}Solution (b)}{25}{}%
 \contentsline {section}{\numberline {1.14}Exercise 1.14}{26}{}%
 \contentsline {section}{\numberline {1.15}Exercise 1.15}{27}{}%
-\contentsline {subsection}{\numberline {1.15.1}Solution (a)}{27}{}%
-\contentsline {section}{\numberline {1.16}Exercise 1.16}{28}{}%
-\contentsline {section}{\numberline {1.17}Exercise 1.17}{29}{}%
-\contentsline {section}{\numberline {1.18}Exercise 1.18}{30}{}%
-\contentsline {section}{\numberline {1.19}Exercise 1.19}{31}{}%
-\contentsline {section}{\numberline {1.20}Exercise 1.20}{32}{}%
-\contentsline {section}{\numberline {1.21}Exercise 1.37}{33}{}%
+\contentsline {subsection}{\numberline {1.15.1}Solution (a) x = 4 and x = -3}{27}{}%
+\contentsline {subsection}{\numberline {1.15.2}Solution (b) $x \in (-3,7)$}{27}{}%
+\contentsline {subsection}{\numberline {1.15.3}Solution (c) $-9 < x < 5$}{28}{}%
+\contentsline {subsection}{\numberline {1.15.4}Solution (d) $x \in (-\infty , -2) \text { and }x \in (2, \infty )$}{28}{}%
+\contentsline {section}{\numberline {1.16}Exercise 1.16}{30}{}%
+\contentsline {section}{\numberline {1.17}Exercise 1.17}{32}{}%
+\contentsline {section}{\numberline {1.18}Exercise 1.18}{33}{}%
+\contentsline {section}{\numberline {1.19}Exercise 1.19}{34}{}%
+\contentsline {section}{\numberline {1.20}Exercise 1.20}{35}{}%
+\contentsline {section}{\numberline {1.21}Exercise 1.37}{36}{}%
