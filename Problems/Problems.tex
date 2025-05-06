@@ -2,7 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-
+\usepackage{multicol}
 
 \begin{document}
 \tableofcontents
@@ -329,6 +329,7 @@ Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
 \end{equation}
 
 \pagebreak
+
 \subsection{Solution (c)}
 \begin{proof}
     We will first define the function $f$ and the function $f^{-1} \circ f$.
@@ -367,7 +368,7 @@ Suppose f: $X \rightarrow Y$ and $A \subseteq X$ and $B \subseteq Y$.\\
 \section{Exercise 1.7}
 Suppose that $f$: $X \rightarrow Y$ and $g$: $Y \rightarrow X$  are functions and that the composite $g \circ f$ is the identity function  id: $X \rightarrow X$. (The identity function sends every element to itself:  id($x$) $= x$.) Show that $f$ must be a one-to-one function and that $g$ must be an onto function. 
 
-\subsection{Solution}
+\subsection*{Solution}
 \newcommand{\id}{\text{id}}
 First, we have to prove that $f$ must be a one-to-one function.
 \begin{proof}
@@ -555,21 +556,75 @@ Proof that $\sqrt{3}$ is irrational.
 \end{proof}
 
 \subsection{Solution (c)}
-\begin{proof}
+First we prove they are both either rational or irrational.
+\begin{proof}[Proof by Contradiction]
     We first consider the product of the two.
     \begin{align}
         (\sqrt{3} + \sqrt{5})(\sqrt{3} - \sqrt{5})
             &=  3 - 5
             =   -2
     \end{align}
+
+    We can clearly see that the product of the two is a rational number. 
+    Now, suppose (for contradiction purposes) that one and only one of two multiplied numbers is rational. 
+    That number would be represented by a fraction of natural numbers $\frac{p}{q}$. 
+    The other number would be irrational, and it would be represented be represented by $n$.
+    \begin{gather}
+        n*\frac{p}{q} = -2\\
+        n * p = -2 * q\\
+        n = \frac{-2*q}{p}
+    \end{gather}
+
+    Since $p$ and $q$ are both natural numbers, that means that $\frac{q}{p}$ is a rational number. 
+    Since rationals are closed under multiplication, this means that $n$ is a rational number.
+    This contradicts our initial assumption.
+    This means that $\sqrt{3} + \sqrt{5} \in \mathbb{Q} \iff \sqrt{3} - \sqrt{5} \in \mathbb{Q}$.
+\end{proof}
+
+Now, we prove that neither are rational.
+\begin{proof}[Proof by Contradiction]
+    We will assume for contradiction purposes that both are rational.
+    \begin{gather}
+        \sqrt{3} + \sqrt{5} \in \mathbb{Q}\\
+        \sqrt{3} - \sqrt{5} \in \mathbb{Q}
+    \end{gather}
+
+    Since rational numbers are closed under addition, we can add the two together and say that the result is rational.
+    \begin{gather}
+        (\sqrt{3} - \sqrt{5}) + (\sqrt{3} + \sqrt{5}) = 2\sqrt{3} \rightarrow
+        2\sqrt{3} \in \mathbb{Q}
+    \end{gather}
+
+    Since 2 is rational and rationals are closed under division (except for 0), then we can say that our result divided by 2 is rational.
+    \begin{gather}
+        \frac{2\sqrt{3}}{2} = \sqrt{3} \rightarrow
+        \sqrt{3} \in \mathbb{Q}
+    \end{gather}
+
+    This is a contradiction of an established statement. 
+    This means that our initial statement is false. 
+    Combining this with the fact that $\sqrt{3} + \sqrt{5} \in \mathbb{Q} \iff \sqrt{3} - \sqrt{5} \in \mathbb{Q}$, we can say that $\sqrt{3} + \sqrt{5} \notin \mathbb{Q}$ and $\sqrt{3} - \sqrt{5} \notin \mathbb{Q}$.\\
+    QED
 \end{proof}
 
 \pagebreak
 \section{Problem 1.10}
 Prove that the multiplicative identity in a field is unique. 
 
-\subsection{Solution}
-
+\subsection*{Solution}
+We'll prove this by contradiction.
+\begin{proof}[Proof by Contradiction]
+    Suppose that the field has two multiplicative identity elements. 
+    The first is 1.
+    Suppose that we call the second one $h$ and that $h \neq 1$.
+    For $h$ to be a multiplicative identity, it would mean that $h \in \mathbb{F}$ and for all $a \in \mathbb{F}$, $a \cdot h = a$.
+    Suppose we were to multiply our two multiplicative identities together.
+    Due to its nature covered in the identity law, $h \cdot 1 = h$.
+    However, our earlier statement would lead us to believe that $h \cdot 1 = 1$.
+    This would only be possible if $h = 1$.
+    This would give us a contradiction, which would mean that the multiplicative identity would be unique.
+    QED
+\end{proof}
 
 \pagebreak
 \section{Problem 1.11}
@@ -577,13 +632,15 @@ Given an ordered field $\mathbb{F}$, recall that we defined the positive element
 
 (i) If $a, b \in P$, then $a + b \in P$ and $a \cdot b \in P$;  
 
-(ii) If $a \in F$ and $a \ne 0$, then either $a \in P$ or $-a \in P$, but not  both. \\
-(a) Give an example of some $P_1 \subseteq R$ that satisfies (i) but not (ii).\\
-(b) Give an example of some $P_2 \subseteq R$ that satisfies (ii) but not (i). 
+(ii) If $a \in \mathbb{F}$ and $a \ne 0$, then either $a \in P$ or $-a \in P$, but not  both. \\
+(a) Give an example of some $P_1 \subseteq \mathbb{R}$ that satisfies (i) but not (ii).\\
+(b) Give an example of some $P_2 \subseteq \mathbb{R}$ that satisfies (ii) but not (i). 
 
 \subsection{Solution (a)}
+For the set of integers in the range $[-\infty,\infty]$, (i) is satisfied, but not (ii). 
 
 \subsection{Solution (b)}
+For the set of integers in the range $[1,2]$, (ii) is satisfied, but not (i). 
 
 
 \pagebreak
@@ -594,8 +651,29 @@ Assume that $\mathbb{F}$ is an ordered field and $a, b, c, d \in \mathbb{F}$ wit
 Note whenever you use an axiom. 
 
 \subsection{Solution (a)}
+\begin{proof}
+    We know that if $a<b$ and $c<d$, then $b - a \in P$ and $d - c \in P$.
+    By the order axiom, 
+    \begin{gather}
+        (b - a) + (d - c) \in P\\
+        (b + d) - (a + c) \in P
+    \end{gather}
+
+    By the definition of the $<$ operator,
+    \begin{gather}
+        a + c < b + d
+    \end{gather}
+    QED
+\end{proof}
 
 \subsection{Solution (b)}
+Counterexample:
+\begin{gather}
+    a = -1; b = 1 \implies a < b\\
+    c = -2; d = 2 \implies c < d\\
+    a * c = 2; b * d = 2 \implies ac = bd
+\end{gather}
+This satisfies the case of a counterexample.
 
 
 \pagebreak
@@ -606,9 +684,383 @@ Let $a, b$ and $\varepsilon$ be elements of an ordered field. \\
 Note whenever you use an axiom. 
 
 \subsection{Solution (a)}
+\begin{proof}[Proof by Contradiction]
+    Suppose that $b < a$.
+    We also know that $\varepsilon > 0$.
+    These both would themselves mean that $a - b \in P$ and $\varepsilon \in P$.
+    We can put the two of these together by the order axiom, as well as establish some other things.
+    \begin{gather}
+        a - b + \varepsilon \in P\\
+        a - b > 0
+    \end{gather}
+    It could be that $\varepsilon = \frac{a - b}{2}$.
+    Since $\varepsilon > 0$, this is applicable.
+    Our given information tells us about further relationships.
+    \begin{gather}
+        a < b + \varepsilon
+    \end{gather}
+    By the order axiom.
+    \begin{gather}
+        b + \varepsilon - a \in P
+    \end{gather}
+    By the associative law.
+    \begin{gather}
+        \varepsilon - (a - b) \in P
+    \end{gather}
+    By the order axiom.
+    \begin{gather}
+        a - b < \varepsilon
+    \end{gather}
+    By an equivalency.
+    \begin{gather}
+        a - b < \frac{a - b}{2}
+    \end{gather}
+    This is a contradiction of itself.\\
+    QED
+\end{proof}
 
 \subsection{Solution (b)}
+\begin{proof}
+    We have a known equation.
+    \begin{equation}
+        |a - b| < \varepsilon
+    \end{equation}
 
+    By Note 1.11.g.
+    \begin{equation}
+        -\varepsilon < a - b < \varepsilon
+    \end{equation}
+
+    This gets split into two equations.
+    \begin{gather}
+        a - b < \varepsilon\\
+        -\varepsilon < a - b
+    \end{gather}
+
+    By Note 1.9.a, adding either $b$ or $b + \varepsilon$, respectively.
+    \begin{gather}
+        a < b + \varepsilon\\
+        b < a + \varepsilon
+    \end{gather}
+
+    We can apply part (a).
+    \begin{gather}
+        a \le b\\
+        b \le a
+    \end{gather}
+
+    There is only case where this does not self-contradict.
+    \begin{equation}
+        a = b
+    \end{equation}
+    QED
+\end{proof}
+
+
+\pagebreak
+\section{Exercise 1.14}
+Prove that the equality $\left|ab\right| = \left|a\right|\cdot\left|b\right|$ holds for  all real numbers a and b. 
+
+\subsection*{Solution}
+\begin{proof}[Proof by Cases]
+    \underline{Case 1: $a, b \in P$}
+    \begin{gather}
+        a = |a|\\
+        b = |b|\\
+        \left|ab\right| = a * b = ab\\
+        \left|a\right| \cdot \left|b\right| = a \cdot b = ab
+    \end{gather}
+    As desired.
+
+    \underline{Case 2: $a \in P, b \notin P$}
+    This applies equally for $a \notin P, b \in P$.
+    \begin{gather}
+        |a| = a\\
+        |b| = -b\\
+        |a|*|b| = a * (-b) = -ab
+    \end{gather}
+
+    Since $a > 0$ and $b < 0$:
+    \begin{gather}
+        ab < 0\\
+        |ab| = -ab
+    \end{gather}
+    As desired.
+
+    \underline{Case 3: $a, b \notin P$}
+    \begin{gather}
+        |a| = -a\\
+        |b| = -b\\
+        |a||b| = ab\\
+    \end{gather}
+
+    Since $a < 0$ and $b < 0$:
+    \begin{gather}
+        ab > 0\\
+        |ab| = ab
+    \end{gather}
+    As desired.
+
+    QED
+\end{proof}
+
+\pagebreak
+\section{Exercise 1.15}
+For each of the following, find all numbers $x$ which satisfy the expression. 
+
+\begin{multicols}{2}
+    \begin{itemize}
+        \item[(a)] $\left|x - 4\right| = 7$
+        \item[(b)] $\left|x - 4\right| < 7$
+        \item[(c)] $\left|x + 2\right| < 7$
+        \item[(d)] $\left|x - 1\right| + \left|x - 2\right| > 1$
+        \item[(e)] $\left|x - 1\right| + \left|x + 1\right| > 1$
+        \item[(f)] $\left|x - 4\right| > 1$
+        \item[(g)] $\left|x - 1\right| \cdot \left|x + 1\right| = 0$
+        \item[(h)] $\left|x - 1\right| \cdot \left|x + 2\right| = 3$
+    \end{itemize}
+\end{multicols}
+
+\subsection{Solution (a) x = 4 and x = -3}
+Case 1: $|x - 4| = x - 4$
+\begin{gather}
+    x - 4 = 7\\
+    x = 11
+\end{gather}
+
+Case 2: $|x - 4| = -(x - 4)$
+\begin{gather}
+    -(x - 4) = 7\\
+    4 - x = 7\\
+    x = -3
+\end{gather}
+
+\subsection{Solution (b) $x \in (-3,7)$}
+Case 1: $|x - 4| = x - 4$
+\begin{gather}
+    x - 4 < 7\\
+    x < 11
+    x \in (-\infty,7)
+\end{gather}
+
+Case 2: $|x - 4| = -(x - 4)$
+\begin{gather}
+    -(x - 4) < 7\\
+    x - 4 > -7\\
+    x > -3
+    x \in (-3,\infty)
+\end{gather}
+
+Combination:
+\begin{align}
+    x   &\in (-\infty,7) \andtxt x \in (-3,\infty)\\
+    x   &\in (-\infty,7) \cap (-3,\infty)\\
+    x   &\in (-3,7)
+\end{align}
+
+\subsection{Solution (c) $-9 < x < 5$}
+There is one point where an absolute value would change at $x = -2$ that divides the field in two.
+
+Case 1: $x < -2$\\
+In this instance, $|x + 2| = -(x + 2) = -x - 2$.
+\begin{gather}
+    |x + 2| < 7\\
+    -x - 2 < 7\\
+    -9 < x
+\end{gather}
+
+Case 2: $x > -2$\\
+In this instance, $|x + 2| = x + 2$
+\begin{gather}
+    |x + 2| < 7\\
+    x + 2 < 7\\
+    x < 5
+\end{gather}
+
+Consolidation\\
+Putting our two cases together, we get \boxed{-9 < x < 5}.
+
+\subsection{Solution (d) $x \in (-\infty, -2) \andtxt x \in (2, \infty)$}
+There are two points where the absolute values would change, at $x = 1$ and $x = 2$, which divides the field in three.
+We can consider all three of these cases.
+
+Case 1: $x < 1$\\
+In this instance, $|x - 1| = -(x - 1) = 1 - x$ and $|x - 2| = -(x - 2) = 2 - x$.
+\begin{gather}
+    \left|x - 1\right| + \left|x - 2\right| > 1\\
+    1 - x + 2 - x > 1\\
+    3 - 2x > 1\\
+    4 > 2x\\
+    x < 2
+\end{gather}
+
+Case 2: $1 < x < 2$\\
+In this instance, $|x - 1| = x - 1$ and $|x - 2| = -(x - 2) = 2 - x$.
+\begin{gather}
+    \left|x - 1\right| + \left|x - 2\right| > 1\\
+    x - 1 + 2 - x > 1\\
+    1 > 1
+\end{gather}
+This is false, so it cannot be the case.
+
+Case 3: $x > 2$\\
+In this instance, $|x - 1| = x - 1$ and $|x - 2| = x - 2$.
+\begin{gather}
+    \left|x - 1\right| + \left|x - 2\right| > 1\\
+    x - 1 + x - 2 > 1\\
+    2x - 3 > 1\\
+    2x > 4\\
+    x > 2
+\end{gather}
+
+Consolidation\\
+This gives a final range for x.
+\begin{equation}
+    \boxed{x \in (-\infty, -2) \andtxt x \in (2, \infty)}
+\end{equation}
+
+\pagebreak
+\section{Exercise 1.16}
+Let $\max\{x, y\}$ denote the maximum of the real numbers $x$ and $y$, and let $\min\{x, y\}$ denote the minimum. 
+For example, $\min\{-1, 4\} = -1$, and also $\min\{-1, -1\} = -1$. 
+Prove that
+\begin{gather*}
+    \max\{x,y\} = \frac{x + y + \left|y - x\right|}{2}
+    \andtxt
+    \min\{x,y\} = \frac{x + y - \left|y - x\right|}{2}
+\end{gather*}
+
+Then, find the formula for $\max\{x,y,z\}$ and $\min\{x,y,z\}$.
+
+\subsection*{Solution}
+\begin{proof}[Proof by Cases]
+    There are three cases to cover: $x > y$, $x < y$, and $x = y$. 
+
+    \underline{Case 1}: $x > y$\\
+    This would mean that $|y - x| = -(y - x) = x - y$.
+    Our goal case would be that $\max\{x,y\} = x$ and that $\min\{x,y\} = y$.
+    \begin{align}
+        \max\{x,y\} &=  \frac{x + y + |y - x|}{2}
+            =   \frac{x + y + x - y}{2}
+            =   \frac{2x + 0y}{2}
+            =   x
+    \end{align}
+    For maximum, this works.
+    \begin{equation}
+        \min\{x,y\} =   \frac{x + y - |y - x|}{2}
+            =   \frac{x + y + y - x}{2}
+            =   \frac{0x + 2y}{2}
+            =   y
+    \end{equation}
+    For minimum, this works. 
+    Conclusively, Case 1 works for both minimum and maximum.
+
+    \underline{Case 2}: $x < y$\\
+    This would mean that $|y - x| = y - x$.
+    Our goal case would be that $\max\{x,y\} = x$ and that $\min\{x,y\} = y$.
+    \begin{align}
+        \max\{x,y\} &=  \frac{x + y + |y - x|}{2}
+            =   \frac{x + y + y - x}{2}
+            =   \frac{0x + 2y}{2}
+            =   y
+    \end{align}
+    For maximum, this works.
+    \begin{equation}
+        \min\{x,y\} =   \frac{x + y - y + x}{2}
+            =   \frac{x + y - y + x}{2}
+            =   \frac{2x + 0y}{2}
+            =   x
+    \end{equation}
+    For minimum, this works. 
+    Conclusively, Case 2 works for both minimum and maximum.
+
+    \underline{Case 3}: $x = y$\\
+    This would mean that $|y - x| = 0$.
+    Our goal would be that the maximum and minimum would be either of the results with substitution and neither without.
+    \begin{align}
+        \max\{x,y\} &=  \frac{x + y + |y - x|}{2}
+            =   \frac{x + y}{2}\\
+        \max\{x,y\} &=  \frac{2x}{2}
+            =   x\\
+        \max\{x,y\} &=  \frac{2y}{2}
+            =   y
+    \end{align}
+    For maximum, this works.
+    \begin{align}
+        \min\{x,y\} &=  \frac{x + y - |y - x|}{2}
+            =   \frac{x + y}{2}\\
+        \min\{x,y\} &=  \frac{2x}{2}
+            =   x\\
+        \min\{x,y\} &=  \frac{2y}{2}
+            =   y
+    \end{align}
+    For minimum, this works.
+    Conclusively, Case 3 works for both maximum and minimum.
+
+    Q.E.D.
+\end{proof}
+
+\pagebreak
+\section{Exercise 1.17}
+Prove that if $a, b \in R$ and $0 < a < b$, then  $a^n < b^n$ for any positive integer n. 
+
+\subsection*{Solution}
+\begin{proof}[Proof by Induction]
+    Induction comes in two parts, firstly from the smallest value. 
+    The smallest value here would be $n = 1$.
+    \begin{gather}
+        a^n < b^n\\
+        a^1 < b^1\\
+        a < b
+    \end{gather}
+    This is a given and confirms the base case requirement.
+
+    Next, we have to prove that $a^n < b^n$ implies $a^{n + 1} < b^{n + 1}$.
+    We can reduce the value on one of the sides to 1.
+    \begin{gather}
+        a^n < b^n\\
+        a^n (a^n)^{-1} < (a^n)^{-1} b^n\\
+        1 < (a^n)^{-1} b^n
+    \end{gather}
+
+    We can do the same with $a < b$, our base case and given.
+    \begin{gather}
+        a < b\\
+        a \cdot b^{-1} < b \cdot b^{-1}\\
+        a \cdot b^{-1} < 1
+    \end{gather}
+
+    The transistive property can be applied here.
+    \begin{gather}
+        a \cdot b^{-1} < (a^n)^{-1} b^n\\
+        a^n a \cdot b^{-1} \cdot b < a^n (a^n)^{-1} b^n \cdot b\\
+        a^n \cdot a < b^n \cdot b\\
+        a^{n + 1} < b^{n + 1}
+    \end{gather}
+    This confirms the successive requirement.
+    As a whole, this confirms the statement.
+
+    Q.E.D.
+\end{proof}
+
+\pagebreak
+\section{Exercise 1.18}
+Prove that if $a_1, a_2,\dots,a_n$ are real numbers, then 
+\begin{gather*}
+    \left| a_1 + a_2 + \dots + a_n \right| \le \left|a_1\right| + \left|a_2\right| + \dots + \left|a_n\right|
+\end{gather*}
+
+\subsection*{Solution}
+
+\pagebreak
+\section{Exercise 1.19}
+Prove that $\overunderset{n}{k = 1}{\Sigma}\frac{1}{k(k + 1)} = \frac{n}{n + 1}$ for every natural number n. 
+
+\subsection*{Solution}
+
+\pagebreak
+\section{Exercise 1.20}
+Determine which natural numbers, $n$, have the  property that $\sqrt{n}$ is irrational. 
 
 \pagebreak
 \section{Exercise 1.37}
