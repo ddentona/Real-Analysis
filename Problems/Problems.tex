@@ -1000,6 +1000,34 @@ Then, find the formula for $\max\{x,y,z\}$ and $\min\{x,y,z\}$.
     Q.E.D.
 \end{proof}
 
+For finding the maximum and minimum values of three numbers, we can know that $\max\{x,y,z\} = \max\{\max\{x,y\},z\}$ and that $\min\{x,y,z\} = \min\{\min\{x,y\},z\}$.
+\begin{align}
+    \max\{x,y,z\}   &=  \max\{\max\{x,y\},z\}\\
+        &=  \frac{\max\{x,y\} + z + \left| z - \max\{x,y\} \right|}{2}\\
+        &=  \frac{\frac{x + y + |y - x|}{2} + z + \left| z - \frac{x + y + |y - x|}{2} \right|}{2}\\
+        &=  \frac{x + y + |y - x| + 2z + 2\left| z - \frac{x + y + |y - x|}{2} \right|}{2}\\
+        &=  \boxed{\frac{x + y + |y - x| + 2z + \left| 2z - x - y - |y - x| \right|}{4}}
+\end{align}
+
+\pagebreak
+Case 1: $|y - x| = y - x$
+\begin{align}
+    \max\{x,y,z\}   &=  \frac{x + y + y - x + 2z + \left| 2z - x - y - y + x \right|}{4}\\
+        &=  \frac{2y + 2z + \left| 2z - 2y \right|}{4}\\
+        &=  \frac{y + z + \left| z - y \right|}{2}
+        =   \max\{y,z\}
+\end{align}
+
+Case 2: $|y - x| = -(y - x) = x - y$
+\begin{align}
+    \max\{x,y,z\}   &=  \frac{x + y + x - y + 2z + \left| 2z - x - y - x + y \right|}{4}\\
+        &=  \frac{2x + 2z + \left| 2z - 2x \right|}{4}\\
+        &=  \frac{x + z + \left| z - x \right|}{2}
+        =   \max\{x,z\}
+\end{align}
+
+$\min\{x,y,z\}$ can be found in a similar way.
+
 \pagebreak
 \section{Exercise 1.17}
 Prove that if $a, b \in R$ and $0 < a < b$, then  $a^n < b^n$ for any positive integer n. 
@@ -1051,12 +1079,70 @@ Prove that if $a_1, a_2,\dots,a_n$ are real numbers, then
 \end{gather*}
 
 \subsection*{Solution}
+\begin{proof}[Proof by Induction]
+    Before we begin, we can rewrite our target equation.
+    \begin{gather}
+        \left| a_1 + a_2 + \dots + a_n \right| \le \left|a_1\right| + \left|a_2\right| + \dots + \left|a_n\right|\\
+        \left|\sum_{i = 1}^{n} a_i\right| \leq \sum_{i = 1}^{n} \left| a_i \right|
+    \end{gather}
+
+    Case 1: Minimum value of $n = 1$\\
+    We have a value for what would be the left side of the equation.
+    \begin{gather}
+        \left| a_1 \right|
+    \end{gather}
+
+    By the reflextive property, we can create equation for it.
+    \begin{equation}
+        \left| a_1 \right| = \left| a_1 \right|
+    \end{equation}
+
+    This stands in concurrence with the requirement of the base case.
+
+    Case 2: $n \implies n + 1$\\
+    We can start with the value of the function for n.
+    \begin{gather}
+        \left| a_1 + a_2 + \dots + a_n \right| \le \left|a_1\right| + \left|a_2\right| + \dots + \left|a_n\right|\\
+        \left|\sum_{i = 1}^{n} a_i\right| \leq \sum_{i = 1}^{n} \left| a_i \right|
+    \end{gather}
+
+    We can add $\left| a_{n + 1} \right|$ to both sides.
+    \begin{gather}
+        \left|\sum_{i = 1}^{n} a_i\right| + \left| a_{n + 1} \right| \leq \sum_{i = 1}^{n} \left| a_i \right| + \left| a_{n + 1} \right|
+    \end{gather}
+
+    We can take the left side and apply the triangle inequality to it.
+    \begin{equation}
+        \left|\sum_{i = 1}^{n} a_i + a_{n + 1} \right| \leq \left|\sum_{i = 1}^{n} a_i\right| + \left| a_{n + 1} \right|
+    \end{equation}
+
+    We can then use the transistive property.
+    \begin{gather}
+        \left|\sum_{i = 1}^{n} a_i + a_{n + 1} \right| \leq \sum_{i = 1}^{n} \left| a_i \right| + \left| a_{n + 1} \right|
+    \end{gather}
+
+    Put the like terms into sums.
+    \begin{gather}
+        \left|\sum_{i = 1}^{n + 1} a_i \right| \leq \sum_{i = 1}^{n + 1} \left| a_i \right|
+    \end{gather}
+
+    This can be rewritten.
+    \begin{equation}
+        \left| a_1 + a_2 + \dots + a_n + a_{n + 1} \right| \le \left|a_1\right| + \left|a_2\right| + \dots + \left|a_n\right| + \left|a_{n + 1}\right|
+    \end{equation}
+
+    This is indeed our target to prove by induction.
+    Q.E.D.
+\end{proof}
 
 \pagebreak
 \section{Exercise 1.19}
 Prove that $\overunderset{n}{k = 1}{\Sigma}\frac{1}{k(k + 1)} = \frac{n}{n + 1}$ for every natural number n. 
 
 \subsection*{Solution}
+\begin{proof}[Proof by Induction]
+    Case 1: base case $n = 1$
+\end{proof}
 
 \pagebreak
 \section{Exercise 1.20}
