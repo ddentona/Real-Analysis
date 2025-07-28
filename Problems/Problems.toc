@@ -1,57 +1,89 @@
-\contentsline {chapter}{\numberline {1}}{3}{}%
-\contentsline {section}{\numberline {1.1}Exercise 1.1}{3}{}%
-\contentsline {section}{\numberline {1.2}Exercise 1.2}{4}{}%
-\contentsline {subsection}{\numberline {1.2.1}Solution (a) True}{4}{}%
-\contentsline {subsection}{\numberline {1.2.2}Solution (b) False}{4}{}%
-\contentsline {subsection}{\numberline {1.2.3}Solution (c) False}{4}{}%
-\contentsline {subsection}{\numberline {1.2.4}Solution (d) True}{4}{}%
-\contentsline {subsection}{\numberline {1.2.5}Solution (e) True}{5}{}%
-\contentsline {subsection}{\numberline {1.2.6}Solution (f) False}{5}{}%
-\contentsline {subsection}{\numberline {1.2.7}Solution (g) True}{5}{}%
-\contentsline {section}{\numberline {1.3}Exercise 1.3}{6}{}%
-\contentsline {subsection}{\numberline {1.3.1}Solution (a)}{6}{}%
-\contentsline {subsection}{\numberline {1.3.2}Solution (b)}{6}{}%
-\contentsline {subsection}{\numberline {1.3.3}Solution (c)}{6}{}%
-\contentsline {section}{\numberline {1.4}Exercise 1.4}{7}{}%
-\contentsline {subsection}{\numberline {1.4.1}Solution (a)}{7}{}%
-\contentsline {subsection}{\numberline {1.4.2}Solution (b)}{7}{}%
-\contentsline {section}{\numberline {1.5}Exercise 1.5}{8}{}%
-\contentsline {subsection}{\numberline {1.5.1}Solution (a)}{8}{}%
-\contentsline {subsection}{\numberline {1.5.2}Solution (b)}{8}{}%
-\contentsline {subsection}{\numberline {1.5.3}Solution (c)}{10}{}%
-\contentsline {subsection}{\numberline {1.5.4}Solution (d)}{11}{}%
-\contentsline {section}{\numberline {1.6}Exercise 1.6}{13}{}%
-\contentsline {subsection}{\numberline {1.6.1}Solution (a)}{13}{}%
-\contentsline {subsection}{\numberline {1.6.2}Solution (b)}{13}{}%
-\contentsline {subsection}{\numberline {1.6.3}Solution (c)}{14}{}%
-\contentsline {subsection}{\numberline {1.6.4}Section (d)}{14}{}%
-\contentsline {section}{\numberline {1.7}Exercise 1.7}{15}{}%
-\contentsline {section}{\numberline {1.8}Exercise 1.8}{17}{}%
-\contentsline {subsection}{\numberline {1.8.1}Solution (a)}{17}{}%
-\contentsline {subsection}{\numberline {1.8.2}Solution (b)}{17}{}%
-\contentsline {section}{\numberline {1.9}Exercise 1.9}{18}{}%
-\contentsline {subsection}{\numberline {1.9.1}Solution (a)}{18}{}%
-\contentsline {subsection}{\numberline {1.9.2}Solution (b)}{19}{}%
-\contentsline {subsection}{\numberline {1.9.3}Solution (c)}{19}{}%
-\contentsline {section}{\numberline {1.10}Problem 1.10}{21}{}%
-\contentsline {section}{\numberline {1.11}Problem 1.11}{22}{}%
-\contentsline {subsection}{\numberline {1.11.1}Solution (a)}{22}{}%
-\contentsline {subsection}{\numberline {1.11.2}Solution (b)}{22}{}%
-\contentsline {section}{\numberline {1.12}Exercise 1.12}{23}{}%
-\contentsline {subsection}{\numberline {1.12.1}Solution (a)}{23}{}%
-\contentsline {subsection}{\numberline {1.12.2}Solution (b)}{23}{}%
-\contentsline {section}{\numberline {1.13}Exercise 1.13}{24}{}%
-\contentsline {subsection}{\numberline {1.13.1}Solution (a)}{24}{}%
-\contentsline {subsection}{\numberline {1.13.2}Solution (b)}{25}{}%
-\contentsline {section}{\numberline {1.14}Exercise 1.14}{26}{}%
-\contentsline {section}{\numberline {1.15}Exercise 1.15}{27}{}%
-\contentsline {subsection}{\numberline {1.15.1}Solution (a) x = 4 and x = -3}{27}{}%
-\contentsline {subsection}{\numberline {1.15.2}Solution (b) $x \in (-3,7)$}{27}{}%
-\contentsline {subsection}{\numberline {1.15.3}Solution (c) $-9 < x < 5$}{28}{}%
-\contentsline {subsection}{\numberline {1.15.4}Solution (d) $x \in (-\infty , -2) \text { and }x \in (2, \infty )$}{28}{}%
-\contentsline {section}{\numberline {1.16}Exercise 1.16}{30}{}%
-\contentsline {section}{\numberline {1.17}Exercise 1.17}{33}{}%
-\contentsline {section}{\numberline {1.18}Exercise 1.18}{34}{}%
-\contentsline {section}{\numberline {1.19}Exercise 1.19}{36}{}%
-\contentsline {section}{\numberline {1.20}Exercise 1.20}{37}{}%
-\contentsline {section}{\numberline {1.21}Exercise 1.37}{38}{}%
+\contentsline {chapter}{\numberline {1}Keeping it Real}{4}{}%
+\contentsline {section}{\numberline {1.1}Exercise 1.1}{4}{}%
+\contentsline {section}{\numberline {1.2}Exercise 1.2}{5}{}%
+\contentsline {subsection}{\numberline {1.2.1}Solution (a) True}{5}{}%
+\contentsline {subsection}{\numberline {1.2.2}Solution (b) False}{5}{}%
+\contentsline {subsection}{\numberline {1.2.3}Solution (c) False}{5}{}%
+\contentsline {subsection}{\numberline {1.2.4}Solution (d) True}{5}{}%
+\contentsline {subsection}{\numberline {1.2.5}Solution (e) True}{6}{}%
+\contentsline {subsection}{\numberline {1.2.6}Solution (f) False}{6}{}%
+\contentsline {subsection}{\numberline {1.2.7}Solution (g) True}{6}{}%
+\contentsline {section}{\numberline {1.3}Exercise 1.3}{7}{}%
+\contentsline {subsection}{\numberline {1.3.1}Solution (a)}{7}{}%
+\contentsline {subsection}{\numberline {1.3.2}Solution (b)}{7}{}%
+\contentsline {subsection}{\numberline {1.3.3}Solution (c)}{7}{}%
+\contentsline {section}{\numberline {1.4}Exercise 1.4}{8}{}%
+\contentsline {subsection}{\numberline {1.4.1}Solution (a)}{8}{}%
+\contentsline {subsection}{\numberline {1.4.2}Solution (b)}{8}{}%
+\contentsline {section}{\numberline {1.5}Exercise 1.5}{9}{}%
+\contentsline {subsection}{\numberline {1.5.1}Solution (a)}{9}{}%
+\contentsline {subsection}{\numberline {1.5.2}Solution (b)}{9}{}%
+\contentsline {subsection}{\numberline {1.5.3}Solution (c)}{11}{}%
+\contentsline {subsection}{\numberline {1.5.4}Solution (d)}{12}{}%
+\contentsline {section}{\numberline {1.6}Exercise 1.6}{14}{}%
+\contentsline {subsection}{\numberline {1.6.1}Solution (a)}{14}{}%
+\contentsline {subsection}{\numberline {1.6.2}Solution (b)}{14}{}%
+\contentsline {subsection}{\numberline {1.6.3}Solution (c)}{15}{}%
+\contentsline {subsection}{\numberline {1.6.4}Section (d)}{15}{}%
+\contentsline {section}{\numberline {1.7}Exercise 1.7}{16}{}%
+\contentsline {section}{\numberline {1.8}Exercise 1.8}{18}{}%
+\contentsline {subsection}{\numberline {1.8.1}Solution (a)}{18}{}%
+\contentsline {subsection}{\numberline {1.8.2}Solution (b)}{18}{}%
+\contentsline {section}{\numberline {1.9}Exercise 1.9}{19}{}%
+\contentsline {subsection}{\numberline {1.9.1}Solution (a)}{19}{}%
+\contentsline {subsection}{\numberline {1.9.2}Solution (b)}{20}{}%
+\contentsline {subsection}{\numberline {1.9.3}Solution (c)}{20}{}%
+\contentsline {section}{\numberline {1.10}Problem 1.10}{22}{}%
+\contentsline {section}{\numberline {1.11}Problem 1.11}{23}{}%
+\contentsline {subsection}{\numberline {1.11.1}Solution (a)}{23}{}%
+\contentsline {subsection}{\numberline {1.11.2}Solution (b)}{23}{}%
+\contentsline {section}{\numberline {1.12}Exercise 1.12}{24}{}%
+\contentsline {subsection}{\numberline {1.12.1}Solution (a)}{24}{}%
+\contentsline {subsection}{\numberline {1.12.2}Solution (b)}{24}{}%
+\contentsline {section}{\numberline {1.13}Exercise 1.13}{25}{}%
+\contentsline {subsection}{\numberline {1.13.1}Solution (a)}{25}{}%
+\contentsline {subsection}{\numberline {1.13.2}Solution (b)}{26}{}%
+\contentsline {section}{\numberline {1.14}Exercise 1.14}{27}{}%
+\contentsline {section}{\numberline {1.15}Exercise 1.15}{28}{}%
+\contentsline {subsection}{\numberline {1.15.1}Solution (a) x = 4 and x = -3}{28}{}%
+\contentsline {subsection}{\numberline {1.15.2}Solution (b) $x \in (-3,7)$}{28}{}%
+\contentsline {subsection}{\numberline {1.15.3}Solution (c) $-9 < x < 5$}{29}{}%
+\contentsline {subsection}{\numberline {1.15.4}Solution (d) $x \in (-\infty , -2) \text { and }x \in (2, \infty )$}{29}{}%
+\contentsline {section}{\numberline {1.16}Exercise 1.16}{31}{}%
+\contentsline {section}{\numberline {1.17}Exercise 1.17}{34}{}%
+\contentsline {section}{\numberline {1.18}Exercise 1.18}{35}{}%
+\contentsline {section}{\numberline {1.19}Exercise 1.19}{37}{}%
+\contentsline {section}{\numberline {1.20}Exercise 1.20}{39}{}%
+\contentsline {section}{\numberline {1.21}Exercise 1.37}{40}{}%
+\contentsline {chapter}{\numberline {2}Theories of Cantor (Somehow not Jewish)}{41}{}%
+\contentsline {section}{\numberline {2.1}Exercise 2.1}{41}{}%
+\contentsline {subsection}{\numberline {2.1.1}Solution (a)}{41}{}%
+\contentsline {subsection}{\numberline {2.1.2}Solution (b)}{41}{}%
+\contentsline {section}{\numberline {2.2}Exercise 2.2}{43}{}%
+\contentsline {section}{\numberline {2.3}Exercise 2.3}{44}{}%
+\contentsline {subsection}{\numberline {2.3.1}Solution (a)}{44}{}%
+\contentsline {subsection}{\numberline {2.3.2}Solution (b)}{44}{}%
+\contentsline {subsection}{\numberline {2.3.3}Solution (c)}{44}{}%
+\contentsline {subsection}{\numberline {2.3.4}Solution (d)}{44}{}%
+\contentsline {subsection}{\numberline {2.3.5}Solution (e)}{45}{}%
+\contentsline {subsection}{\numberline {2.3.6}Solution (f)}{45}{}%
+\contentsline {subsection}{\numberline {2.3.7}Solution (g)}{45}{}%
+\contentsline {subsection}{\numberline {2.3.8}Solution (h)}{45}{}%
+\contentsline {section}{\numberline {2.4}Exercise 2.4}{46}{}%
+\contentsline {subsection}{\numberline {2.4.1}Solution (a)}{46}{}%
+\contentsline {subsection}{\numberline {2.4.2}Solution (b)}{46}{}%
+\contentsline {subsection}{\numberline {2.4.3}Solution (c)}{46}{}%
+\contentsline {section}{\numberline {2.5}Exercise 2.5}{47}{}%
+\contentsline {subsection}{\numberline {2.5.1}Solution (a)}{47}{}%
+\contentsline {subsection}{\numberline {2.5.2}Solution (b)}{47}{}%
+\contentsline {section}{\numberline {2.6}Exercise 2.6}{48}{}%
+\contentsline {section}{\numberline {2.7}Exercise 2.7}{49}{}%
+\contentsline {subsection}{\numberline {2.7.1}Solution (a)}{49}{}%
+\contentsline {subsection}{\numberline {2.7.2}Solution (b)}{49}{}%
+\contentsline {subsection}{\numberline {2.7.3}Solution (c)}{49}{}%
+\contentsline {subsection}{\numberline {2.7.4}Solution (d)}{49}{}%
+\contentsline {section}{\numberline {2.8}Exercise 2.8}{50}{}%
+\contentsline {subsection}{\numberline {2.8.1}Solution (a)}{50}{}%
+\contentsline {subsection}{\numberline {2.8.2}Solution (b)}{50}{}%
+\contentsline {section}{\numberline {2.9}Exercise 2.9}{51}{}%
+\contentsline {section}{\numberline {2.10}Exercise 2.10}{52}{}%
