@@ -87,3 +87,11 @@
 \contentsline {subsection}{\numberline {2.8.2}Solution (b)}{50}{}%
 \contentsline {section}{\numberline {2.9}Exercise 2.9}{51}{}%
 \contentsline {section}{\numberline {2.10}Exercise 2.10}{52}{}%
+\contentsline {section}{\numberline {2.11}Exercise 2.11}{53}{}%
+\contentsline {section}{\numberline {2.12}Exercise 2.12}{54}{}%
+\contentsline {section}{\numberline {2.13}Exercise 2.21}{55}{}%
+\contentsline {section}{\numberline {2.14}Exercise 2.22}{56}{}%
+\contentsline {subsection}{\numberline {2.14.1}Solution (a)}{56}{}%
+\contentsline {subsection}{\numberline {2.14.2}Solution (b)}{56}{}%
+\contentsline {chapter}{\numberline {3}A Game of Hide and Sequence}{58}{}%
+\contentsline {section}{\numberline {3.1}Exercise 3.1}{58}{}%

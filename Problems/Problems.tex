@@ -1615,4 +1615,132 @@ For each value of that, we would create a formula for the respective value of me
 This in turn creates a new value of a set in $S$, which is previously unwritten.
 This in turn establishes that the set is uncountably infinite.
 
+\pagebreak
+\section{Exercise 2.11}
+Suppose that $X$ is a nonempty set. Prove that  the following three assertions are equivalent:  
+
+(a) $X$ is finite or countably infinite.  
+
+(b) There is a one-to-one function $f: X \to \mathbb{N}$.  
+
+(c) There is an onto function $g: \mathbb{N} \to X$. 
+
+\subsection*{Solution}
+\begin{proof}
+    We can rewrite (b) as for $a,b \in X$ and given $f(a), f(b) \in \mathbb{N}$, the below applies.
+    \begin{equation}
+        f(a) = f(b) \implies a = b 
+    \end{equation}
+
+    We can rewrite (c) as for $b \in X$, the below applies. 
+    \begin{equation}
+        \exists a \in \mathbb{N} : g(a) = b
+    \end{equation}
+
+    We can rewrite (a) as there being a correspondence between $\mathbb{N}$ and $X$ such that every .
+\end{proof}
+
+\pagebreak
+\section{Exercise 2.12}
+(a) Give an example of a collection of countably many disjoint open intervals, or prove that this does not exist. \\
+(b) Give an example of a collection of uncountably many disjoint open intervals, or prove that this does not exist. 
+
+\pagebreak
+\section{Exercise 2.21}
+Prove that the set of points on the unit circle in $\mathbb{R}^2$ (that is, $\{(x, y): x^2 + y^2 = 1\}$) is uncountable. 
+
+\subsection*{Solution}
+\begin{proof}
+    As given in the definition of a unit circle, there is a formula that $(x,y)$ must follow.
+    \begin{equation}
+        x^2 + y^2 = 1
+    \end{equation}
+    
+    This equation can be solved for $y$. 
+    \begin{equation}
+        y = \pm\sqrt{1 - x^2}
+    \end{equation}
+    
+    This in turn creates a bijection between $\mathbb{R}$ and either $\mathbb{R} \times [0,\infty)$ or $\mathbb{R} \times (-\infty,0]$, for which we can focus on the former.
+    This bijection can have an associated function.
+    \begin{gather}
+        f: \mathbb{R} \to \mathbb{R} \times [0,\infty)\\
+        x \mapsto (x, \sqrt{1 - x^2})
+    \end{gather}
+
+    For this, there should be a correction that $\sqrt{1 - x^2}$ will only be real if $-1 \leq x \leq 1$, which we can use to correct our function.
+    \begin{gather}
+        f: [-1,1] \to [-1,1] \times [0,1]\\
+        x \mapsto (x, \sqrt{1 - x^2})
+    \end{gather}
+    
+    This gives us a domain for the points on a quarter of a unit circle of $[-1,1]$. 
+    It has been previously established that there are uncountable real numbers between 0 and 1. 
+    This means that there are uncountable real numbers between -1 and 1.
+    As such, there are unlimited real numbers that are points on a unit circle.
+
+    Q.E.D.
+\end{proof}
+
+\pagebreak
+\section{Exercise 2.22}
+A real number $x$ is said to be \textit{algebraic} (over the rationals) if it satisfies some polynomial equation (of positive degree) 
+\begin{equation*}
+    a_n x^n + a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \dots + a_1 x + a_0 = 0 
+\end{equation*}
+where each $a_i \in \mathbb{Q}$. If a real number is not algebraic, then it is \textit{transcendental}. 
+
+(a) Prove that there are countably many algebraic numbers. (You  may use the fundamental theorem of algebra which says that a polynomial with degree $n$ has at most $n$ real roots.) 
+
+(b) Prove that there are uncountably many transcendental numbers. 
+
+\subsection{Solution (a)}
+\begin{proof}
+    The fundamental theorem of algebra says that a polynomial of degree $n$ has at most $n$ real roots.
+    This means that the real roots of any given polynomial can be expressed as a finite set of real numbers and as such is countable.
+    This means that any given polynomial has countably many real roots, all of which would be algebraic real numbers.
+
+    It has been previously established that that the set of all polynomials with rational coefficients (as we are dealing with presently) is countable.
+    We can in turn count the algebraic numbers by counting each polynomial and counting each of their roots as we count them.
+    This establishes these algebraic numbers as countable.
+
+    Q.E.D.
+\end{proof}
+
+\subsection{Solution (b)}
+We can prove this in a similar way to proving there are uncountably many irrational numbers.
+\begin{proof}[Proof by Contradiction]
+    Suppose for contradication that the set of transcendental numbers $T$ is countable.
+    The set of algebraic numbers $A$ is already established to be countable.
+    We can express this in terms of cardinalities.
+    \begin{equation}
+        |A| = |T| = |\mathbb{N}|
+    \end{equation}
+
+    Transcendental numbers are defined as being real numbers that are not algebraic.
+    \begin{gather}
+        T = \mathbb{R} \setminus A\\
+        A \cup T = \mathbb{R}
+    \end{gather}
+
+    Since both $A$ and $T$ are countable, we can form a function to combine the two through $\mathbb{N}$ which becomes $\mathbb{R}$ given $A \cup T = \mathbb{R}$.
+    \begin{gather}
+        f: \mathbb{N} \to \mathbb{R}\\
+        n \mapsto \begin{cases}
+            A(\lceil\frac{n}{2}\rceil) &\text{if } n \equiv 0 \mod 2\\
+            T(\lceil\frac{n}{2}\rceil) &\text{if } n \equiv 1 \mod 2
+        \end{cases}
+    \end{gather}
+
+    This establishes that $\mathbb{R}$ is countably infinite. 
+    This contradicts that $\mathbb{R}$ is uncountably infinite.
+    As such, we can conclude that there are uncountably many transcendental numbers.
+\end{proof}
+
+\pagebreak
+\chapter{A Game of Hide and Sequence}
+
+\section{Exercise 3.1}
+Suppose that a sequence ($a_n$) converges to 0.001. Prove that finitely many values of $a_n$ are negative. 
+
 \end{document}
