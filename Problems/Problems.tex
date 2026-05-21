@@ -5,6 +5,8 @@
 \usepackage{multicol}
 
 \begin{document}
+\renewcommand\qedsymbol{OE$\Delta$}
+
 \tableofcontents
 \pagebreak
 \chapter{Keeping it Real}
@@ -1840,9 +1842,53 @@ We can prove this in a similar way to proving there are uncountably many irratio
 \end{proof}
 
 \pagebreak
+
 \chapter{A Game of Hide and Sequence}
 
 \section{Exercise 3.1}
-Suppose that a sequence ($a_n$) converges to 0.001. Prove that finitely many values of $a_n$ are negative. 
+    Suppose that a sequence ($a_n$) converges to 0.001. 
+    Prove that finitely many values of $a_n$ are negative. 
 
+    \subsection{Solution}
+        \begin{proof}
+            Recall the definition of convergence.
+            \begin{equation}
+                \forall \varepsilon > 0, \exists N : \forall n > N, \left| a_n - 0.001 \right| < \varepsilon
+            \end{equation}
+
+            The last part of that can have the absolute value removed.
+            \begin{equation}
+                -\varepsilon < a_n - 0.001 < \varepsilon
+            \end{equation}
+
+            Suppose that $\varepsilon = 0.001$.
+            \begin{gather}
+                -0.001 < a_n - 0.001 < 0.001\\
+                0 < a_n < 0.002
+            \end{gather}
+
+            This means that for all $n > N$, $a_n$ is positive.
+            This means that a finite number $N$ of $a_n$ can be negative or zero.
+            This means that a finite number of $a_n$ are negative.
+        \end{proof}
+
+\pagebreak
+\setcounter{section}{31}
+\section{Exercise 3.32}
+    Let $(a_n) \subset \mathbb{R}$.
+    Prove that if every subsequence of $(a_n)$ converges, then $(a_n)$ does.
+
+    \subsection{Solution}
+        \begin{proof}
+            Suppose that we create a subsequence of $(a_n)$ that includes every member of $(a_n)$ except the first.
+            By the rule, it converges.
+            \begin{equation}
+                \forall \varepsilon > 0, \exists N \in \mathbb{N} \backslash \{1\}: \forall n > N, \left| a_n - a \right| < \varepsilon
+            \end{equation}
+
+            Suppose that we do add $a_1$ to the sequence as its first member.
+            There would be no violation of the rules of convergence.
+            This would also be the sequence $(a_n)$ exactly.
+            Therefore, $(a_n)$ converges.
+        \end{proof}
 \end{document}
