@@ -95,5 +95,3 @@
 \contentsline {subsection}{\numberline {2.14.2}Solution (b)}{56}{}%
 \contentsline {chapter}{\numberline {3}A Game of Hide and Sequence}{58}{}%
 \contentsline {section}{\numberline {3.1}Exercise 3.1}{58}{}%
-\contentsline {section}{\numberline {3.2}Exercise 3.22}{58}{}%
-\contentsline {subsection}{\numberline {3.2.1}Solution (b)}{58}{}%
