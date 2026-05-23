@@ -6,6 +6,8 @@
 \usepackage{multicol}
 
 \begin{document}
+\renewcommand\qedsymbol{OE$\Delta$}
+
 \tableofcontents
 \pagebreak
 \chapter{Keeping it Real}
@@ -1189,6 +1191,108 @@ Prove that $\overunderset{n}{k = 1}{\Sigma}\frac{1}{k(k + 1)} = \frac{n}{n + 1}$
 \section{Exercise 1.20}
 Determine which natural numbers, $n$, have the  property that $\sqrt{n}$ is irrational. 
 
+\subsection*{Solution}
+All numbers that are not perfect squares.
+
+\pagebreak
+\section{Exercise 1.21}
+
+\subsection*{Solution}
+    Given: $f: X \to Y; A_1, A_2 \subseteq X$
+    Prove: $f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2)$
+\begin{proof}
+    \begin{gather}
+        f(A_1 \cap A_2) = \{f(x) : x \in A_1 \andtxt x \in A_2\}\\
+        f(A_1) = \{f(x) : x \in A_1\}\\
+        f(A_2) = \{f(x) : x \in A_2\}
+    \end{gather}
+
+    Suppose $x \in A_1 \cap A_2$.
+    \begin{gather}
+        x \in A_1 \andtxt x \in A_2\\
+        f(x) \in f(A_1 \cap A_2)\\
+        f(x) \in f(A_1) \andtxt f(x) \in f(A_2)\\
+        f(x) \in f(A_1) \cap f(A_2)
+    \end{gather}
+    \begin{align}
+        \because    &f(x) \in f(A_1 \cap A_2) \to f(x) \in f(A_1) \cap f(A_2)\\
+        \therefore  &f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2)
+    \end{align}
+
+    Q.E.D.
+\end{proof}
+
+\pagebreak
+\section{Exercise 1.22}
+
+\subsection*{Solution}
+    Suppose that A is all positive numbers and B is all non-zero negative numbers.
+    If we have the below function, the case holds.
+    \begin{gather}
+        f: \mathbb{Z} \to \mathbb{N}\\
+        n \to n^2
+    \end{gather}
+
+\pagebreak
+\section{Exercise 1.23}
+
+\subsection*{Solution}
+    Given: $A \subseteq B$; $A \andtxt B$ are bounded above\\
+    Prove: $\sup(A) \leq \sup(B)$
+    \begin{proof}[Proof by Contradiction]
+        Suppose for Contradiction that $\sup(A) > \sup(B)$.
+        We know that $\{x : x \in B \andtxt x > \sup(B)\} = \emptyset$.
+        This in turn means that $x > \sup(B) \to x \notin B$.
+        Since $\sup(A) > \sup(B)$, $\sup(A) \notin B$.
+        Since $A \subseteq B$, then $\sup(B)$ is an upper bound of $B$.
+        Since $\sup(A) > \sup(B)$, that would make $\sup(B)$ the least upper bound of $A$.
+        This contradicts that $\sup(A)$ is the least upper bound of $B$.
+        Therefore, our assumption is false and $\sup(A) \leq \sup(B)$.
+        Q.E.D.
+    \end{proof}
+
+\pagebreak
+\section{Exercise 1.24}
+
+\subsection{Solution (a)}
+    We have to prove that $\sup(A) = M$.
+    \begin{proof}
+        We know that $x \leq M$ for all $x \in A$.
+        This tells us that $M$ is an upper bound of $A$.
+
+        The other half is that for every other upper bound of $A$ (called $a$), $M \leq a$.
+
+        For all upper bounds $a$ and for all $x \in A$, $x \leq a$. 
+
+        If there exists an upper bound $a$ such that for one or more $x \in A$ and $x > a'$, $a'$ is not an upper bound of $A$, so $M$ must be less than or equal to $a$ for any other upper bound of $A$ (called $a$), or $M \leq a$.
+
+        This satisfies the requirements to say that $M = \sup(A)$.
+
+        Q.E.D.
+    \end{proof}
+
+\subsection{Solution (b)}
+    Similar format to solution (a).
+
+\pagebreak
+\section{Exercise 1.25}
+
+\subsection*{Solution}
+    \begin{proof}[Proof by Induction]
+        Suppose that $A_n$ indicates a set wth $n$ members.
+
+        \textit{Case 1: Base case n = 1}
+
+        $A_1$ contains 1 object $a$. As such, $\max(A) = a$, since $a$ is the only member of $A$.
+
+        \textit{Case 2: Inductive step n $\rightarrow$ n+1}
+
+        $A_n$ contins a maximum object $m$.
+        Suppose we add an object $k$ to $A_n$ to form $A_{n+1}$.
+        If $m \leq k$, then $\max(A) = m$, so nothing changes and $\max(A) \in A$.
+        If $m > k$, then $\max(A) = k$, so since $f \in A_{n+1}$, $\max(A) \in A$.
+    \end{proof}
+
 \pagebreak
 \section{Exercise 1.37}
 (a) Determine
@@ -1739,10 +1843,53 @@ We can prove this in a similar way to proving there are uncountably many irratio
 \end{proof}
 
 \pagebreak
+
 \chapter{A Game of Hide and Sequence}
 
-    \section{Exercise 3.1}
-        Suppose that a sequence ($a_n$) converges to 0.001. Prove that finitely many values of $a_n$ are negative. 
+\section{Exercise 3.1}
+    Suppose that a sequence ($a_n$) converges to 0.001. 
+    Prove that finitely many values of $a_n$ are negative. 
 
-    
+    \subsection{Solution}
+        \begin{proof}
+            Recall the definition of convergence.
+            \begin{equation}
+                \forall \varepsilon > 0, \exists N : \forall n > N, \left| a_n - 0.001 \right| < \varepsilon
+            \end{equation}
+
+            The last part of that can have the absolute value removed.
+            \begin{equation}
+                -\varepsilon < a_n - 0.001 < \varepsilon
+            \end{equation}
+
+            Suppose that $\varepsilon = 0.001$.
+            \begin{gather}
+                -0.001 < a_n - 0.001 < 0.001\\
+                0 < a_n < 0.002
+            \end{gather}
+
+            This means that for all $n > N$, $a_n$ is positive.
+            This means that a finite number $N$ of $a_n$ can be negative or zero.
+            This means that a finite number of $a_n$ are negative.
+        \end{proof}
+
+\pagebreak
+\setcounter{section}{31}
+\section{Exercise 3.32}
+    Let $(a_n) \subset \mathbb{R}$.
+    Prove that if every subsequence of $(a_n)$ converges, then $(a_n)$ does.
+
+    \subsection{Solution}
+        \begin{proof}
+            Suppose that we create a subsequence of $(a_n)$ that includes every member of $(a_n)$ except the first.
+            By the rule, it converges.
+            \begin{equation}
+                \forall \varepsilon > 0, \exists N \in \mathbb{N} \backslash \{1\}: \forall n > N, \left| a_n - a \right| < \varepsilon
+            \end{equation}
+
+            Suppose that we do add $a_1$ to the sequence as its first member.
+            There would be no violation of the rules of convergence.
+            This would also be the sequence $(a_n)$ exactly.
+            Therefore, $(a_n)$ converges.
+        \end{proof}
 \end{document}
