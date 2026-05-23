@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{enumitem}
 \usepackage{multicol}
 
 \begin{document}
@@ -1740,7 +1741,89 @@ We can prove this in a similar way to proving there are uncountably many irratio
 \pagebreak
 \chapter{A Game of Hide and Sequence}
 
-\section{Exercise 3.1}
-Suppose that a sequence ($a_n$) converges to 0.001. Prove that finitely many values of $a_n$ are negative. 
+    \section{Exercise 3.1}
+        Suppose that a sequence ($a_n$) converges to 0.001. Prove that finitely many values of $a_n$ are negative. 
 
+    \section{Exercise 3.22}
+        Suppose ($a_n$) and ($b_n$) are sequences.
+        \begin{enumerate}[label=(\alph*)]
+            \item   Prove that $a_n \to L$ and $a_n \leq M$ for all $n$, then $L \leq M$.
+            \item   Assume that $a_n \leq b_n$ for all $n$. Prove that if $a_n \to L$ and $b_n \to M$, then $L \leq M$.
+        \end{enumerate}
+
+        \subsection{Solution (b)}
+            \begin{proof}[Proof by Contradiction]
+                Suppose for contradiction that $L > M$.
+
+                We know from the start that $a_n \to L$ and $b_n \to M$.
+                \begin{gather}
+                    \label{eq:3.22.b.1}
+                    \forall \varepsilon > 0, \exists N : \forall n > N, \left| a_n - L \right| < \varepsilon\\
+                    \label{eq:3.22.b.2}
+                    \forall \varepsilon > 0, \exists N : \forall n > N, \left| b_n - M \right| < \varepsilon
+                \end{gather}
+
+                Furthermore, we can subtract $b_n$ from $a_n$, which also has a limit.
+                \begin{gather}
+                    \label{eq:3.22.b.3}
+                    b_n - a_n \to M - L\\
+                    \label{eq:3.22.b.4}
+                    \forall \varepsilon > 0, \exists N : \forall n > N, \left| (b_n - a_n) - (M - L) \right| < \varepsilon
+                \end{gather}
+
+                In both (\ref{eq:3.22.b.1}) and (\ref{eq:3.22.b.2}), $\varepsilon > 0$.
+                We can recall $L > M$, just so it's enumerated.
+                \begin{gather}
+                    \label{eq:3.22.b.5}
+                    L > M\\
+                    \label{eq:3.22.b.6}
+                    L - M > 0\\
+                    \label{eq:3.22.b.7}
+                    \left| L - M \right| = L - M
+                \end{gather}
+
+                Take (\ref{eq:3.22.b.2}) and manipulate it into a similar equation by multiplying by $-1$ in the absolute value (it changes nothing else).
+                \begin{equation}
+                    \label{eq:3.22.b.8}
+                    \left| M - b_n \right| < \varepsilon
+                \end{equation}
+
+                We can add together (\ref{eq:3.22.b.1}) and (\ref{eq:3.22.b.8}) and get another $\varepsilon > 0$.
+                \begin{equation}
+                    \label{eq:3.22.b.9}
+                    \left| a_n - L \right| + \left| M - b_n \right| < \varepsilon
+                \end{equation}
+
+                We can apply the triangle inequality here.
+                \begin{equation}
+                    \label{eq:3.22.b.10}
+                    \left| a_n - b_n - L + M \right| \leq \left| a_n - L \right| + \left| M - b_n \right| < \varepsilon
+                \end{equation}
+
+                Next, apply the inverse triangle inequality.
+                \begin{equation}
+                    \label{eq:3.22.b.11}
+                    \left| \left| a_n - b_n \right| - \left| L - M \right| \right| \leq \left| a_n - b_n - L + M \right| < \varepsilon
+                \end{equation}
+
+                Recall the statement that $a_n \leq b_n$ and manipulate that.
+                \begin{gather}
+                    \label{eq:3.22.b.12}
+                    a_n \leq b_n\\
+                    \label{eq:3.22.b.13}
+                    0 \leq b_n - a_n\\
+                    \label{eq:3.22.b.14}
+                    \left| b_n - a_n \right| = \left| a_n - b_n \right| = b_n - a_n
+                \end{gather}
+
+                Now, we can substitute in values for (\ref{eq:3.22.b.11}) elated to absolute values, specifically recalling (\ref{eq:3.22.b.7}) and (\ref{eq:3.22.b.14}).
+                \begin{gather}
+                    \label{eq:3.22.b.15}
+                    \left| (b_n - a_n) - (L - M) \right| < \varepsilon
+                \end{gather}
+
+                This in turn implies that $b_n - a_n \to L - M$, which is a contradiction of (\ref{eq:3.22.b.3}).
+                Ergo, $L \leq M$. TENA.
+            \end{proof}
+        
 \end{document}
