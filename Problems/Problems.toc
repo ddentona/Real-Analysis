@@ -105,3 +105,6 @@
 \contentsline {subsection}{\numberline {3.1.1}Solution}{64}{}%
 \contentsline {section}{\numberline {3.32}Exercise 3.32}{65}{}%
 \contentsline {subsection}{\numberline {3.32.1}Solution}{65}{}%
+\contentsline {section}{\numberline {3.33}Exercise 3.33}{65}{}%
+\contentsline {section}{\numberline {3.34}Exercise 3.34}{66}{}%
+\contentsline {subsection}{\numberline {3.34.1}Solution}{66}{}%

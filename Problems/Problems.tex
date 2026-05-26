@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{enumitem}
 \usepackage{multicol}
 
 \begin{document}
@@ -1891,4 +1892,25 @@ We can prove this in a similar way to proving there are uncountably many irratio
             This would also be the sequence $(a_n)$ exactly.
             Therefore, $(a_n)$ converges.
         \end{proof}
+
+\section{Exercise 3.33}
+
+\pagebreak
+\section{Exercise 3.34}
+    Give an example of two sequences $(a_n)$ and $(b_n)$ that satisfy the following four conditions.
+    \begin{multicols}{2}
+        \begin{enumerate}[label=(\alph*)]
+            \item   $\lim_{n \to \infty} a_n$ does not exist.
+            \item   $\lim_{n \to \infty} b_n$ does not exist.
+            \item   $(a_n \cdot b_n) \to \infty$
+            \item   $(a_n \cdot b_{n+1}) \to -\infty$
+        \end{enumerate}
+    \end{multicols}
+
+    \subsection{Solution}
+        Suppose we define $(a_n)$ and $(b_n)$.
+        \begin{gather}
+            a_n := (-1)^n n\\
+            b_n := (-1)^{n+1} n
+        \end{gather}
 \end{document}
