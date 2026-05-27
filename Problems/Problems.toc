@@ -123,3 +123,4 @@
 \contentsline {section}{\numberline {3.39}Problem 3.44}{75}{}%
 \contentsline {subsection}{\numberline {3.39.1}Solution}{75}{}%
 \contentsline {section}{\numberline {3.40}Problem 3.45}{77}{}%
+\contentsline {subsection}{\numberline {3.40.1}Solution}{77}{}%

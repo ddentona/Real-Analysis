@@ -1,0 +1,93 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\begin{document}
+\renewcommand\qedsymbol{OE$\Delta$}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\andtxt}{\text{ and }}
+\newcommand{\mathif}{\text{if }}
+\newcommand{\seq}[2][n]{\ensuremath{(#2 _{#1})}}
+
+\tableofcontents
+\pagebreak
+
+\setcounter{chapter}{3}
+\chapter{Series not on TV}
+
+\section{Problem 4.1}
+    Determine whether each of the following converges conditionally, converges absolutely, or diverges. 
+    You do not need  to prove your answers, but state which of the following tests gives the answers: the $k^{\rm th}$-term test, the geometric series test, and the alternating series test.
+    \begin{multicols}{3}
+        \begin{enumerate}[label=(\alph*)]
+            \item   $\sum_{k = 1}^{\infty}  (-1)^k \frac{1}{\sqrt{k}}$
+            \item   $\sum_{k = 1}^{\infty}  (-1)^k \frac{k}{k + 7}$
+            \item   $\sum_{k = 1}^{\infty}  \frac{1}{(\ln(4))^k}$
+            \item   $\sum_{k = 1}^{\infty}  \frac{1}{k!}$
+            \item   {\scriptsize $\sum_{k = 1}^{\infty}  (\sqrt{k + 1} - \sqrt{k})$}
+            \item   $\sum_{k = 1}^{\infty}  \frac{1}{2}$
+            \item   $\sum_{k = 1}^{\infty}  (-1)^k \frac{1}{\sqrt[3]{k}}$
+            \item   $\sum_{k = 53}^{\infty} \frac{\ln(k)}{\ln(\ln(k))}$
+            \item   $\sum_{k = 7}^{\infty}  \left( \frac{2}{k} + \frac{3}{k^2} \right)$
+        \end{enumerate}
+    \end{multicols}
+
+\section{Problem 4.3}
+    Prove that if $\sum_{k = 1}^{\infty} \abs{a_k}$ converges, then $\sum_{k = 1}^{\infty} a_k$ converge too.
+    This is Propostion 4.18.
+
+\section{Problem 4.5}
+    Give an example of a series where $\sum_{k = 1}^{\infty} a_k$ converges but $\sum_{k = 1}^{\infty} a_{2k}$ diverges.
+
+\section{Problem 4.7}
+    Give an example of a series $\sum_{k = 1}^{\infty} a_k$ where:
+    \begin{multicols}{3}
+        \begin{itemize}
+            \item {\small $\sum_{k = 1}^{\infty} a_k$ converges,}
+            \item {\small $\sum_{k = 1}^{\infty} a_k^2$ diverges}
+            \item $\sum_{k = 1}^{\infty} a_k^3$ converges
+        \end{itemize}
+    \end{multicols}
+
+\section{Problem 4.9}
+    The geometric series test (Proposition 4.9) says  that a geometric series diverges if $\abs{r} \geq 1$. 
+    Recall that a series can  diverge to $\infty$, to $-\infty$, or can be ``does not exist.'' 
+    Which form of divergence is it for a geometric series? 
+    Note that your answer may depend on r. 
+
+\section{Problem 4.11}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Find a way to write 77.77777777... as a geometric series, and then prove this number is rational by using the geometric series test to write this number as a fraction with integers in the numerator and denominator.
+        \item   Write 77.77777777... as a different geometric series, and use the geometric series test to write this number as a fraction with integers in the numerator and denominator. Are your two fractions the same?
+        \item   A number $q$ has a repeating decimal if the non-integer portion of its decimal expansion is repetitive. For example, 72.578578578578578... has a repeating decimal. Prove that if a number $q$ has a repeating  decimal, then $q$ is rational. 
+    \end{enumerate}
+
+\section{Problem 4.17}
+    Prove the ratio test via the following steps. 
+    Given a series $\sum_{k = 1}^{\infty} a_k$ with $a_k = 0$, assume that 
+    \begin{equation*}
+        \lim_{k \to \infty} \abs{\frac{a_{k+1}}{a_{k}}} =: r < 1
+    \end{equation*}
+    We will prove that the series converges absolutely.
+    \begin{enumerate}[label=(\alph*)]
+        \item   Let $q$ be such that $r < q < 1$. Explan why there is some $N$ such that $n \geq N$ implies that $\abs a_{k+1} \leq \abs{a_k} \cdot q$.
+        \item   Explain why $\sum_{k = 1}^{\infty} \abs{a_N} \cdot q^k$ necessarily converges.
+        \item   Finally, use part (b) to prove that $\sum_{k = 1}^{\infty} \abs{a_k}$ converges.
+    \end{enumerate}
+
+\section{Problem 4.18}
+
+\section{Problem 4.23}
+
+\section{Problem 4.24}
+
+\section{Problem 4.25}
+
+\section{Problem 4.26}
+
+\section{Problem 4.27}
+
+\end{document}

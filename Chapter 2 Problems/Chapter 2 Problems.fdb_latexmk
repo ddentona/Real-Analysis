@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1779854547.89862 "c:/Users/ddent/OneDrive/Documents/Real-Analysis/Problems/Problems.tex" "Problems.pdf" "Problems" 1779854549.85628 0
+["pdflatex"] 1779855251.79462 "c:/Users/ddent/OneDrive/Documents/Real-Analysis/Chapter 2 Problems/Chapter 2 Problems.tex" "Chapter 2 Problems.pdf" "Chapter 2 Problems" 1779855254.27113 0
   "C:/Users/ddent/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772552384 151629 65cd6e1296beda1feb8e616e59f2da55 ""
   "C:/Users/ddent/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1724529747 14064 a73e2491cc17373621ceadb450a5a7ef ""
   "C:/Users/ddent/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1724473854 24225046 9a86b7f1ef10f5afb0aa895fddb2583f ""
@@ -10,9 +10,7 @@
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
-  "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
-  "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx7.tfm" 1136765053 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -55,13 +53,13 @@
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty" 1738917170 52272 63d293bc0d496619edb57585740861a2 ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1704400941 30006 57b07afb710ee2f649c65cfbafda39c1 ""
   "C:/Users/ddent/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1700599895 32515 51caec75eda9c8890135f12f1a4eddc3 ""
-  "Problems.aux" 1779854549 14521 0b6ae8e4fc286389c2aa8cf55a8d2faa "pdflatex"
-  "Problems.tex" 1779854546 89278 1eb1468e5e04f44c32cdb1085992b067 ""
-  "Problems.toc" 1779854549 8403 351479d6ebd573027aac43926853ea1d "pdflatex"
-  "c:/Users/ddent/OneDrive/Documents/Real-Analysis/Problems/Problems.tex" 1779854546 89278 1eb1468e5e04f44c32cdb1085992b067 ""
+  "Chapter 2 Problems.aux" 1779855253 4154 828147af1b8d461616324122ee25b3a5 "pdflatex"
+  "Chapter 2 Problems.tex" 1779855248 19760 7f4595c074f290b76bcfb9a21ca740cc ""
+  "Chapter 2 Problems.toc" 1779855253 2487 1d2670be9b71fefb76e47d476d54ee29 "pdflatex"
+  "c:/Users/ddent/OneDrive/Documents/Real-Analysis/Chapter 2 Problems/Chapter 2 Problems.tex" 1779855248 19760 7f4595c074f290b76bcfb9a21ca740cc ""
   (generated)
-  "Problems.aux"
-  "Problems.log"
-  "Problems.pdf"
-  "Problems.toc"
+  "Chapter 2 Problems.aux"
+  "Chapter 2 Problems.log"
+  "Chapter 2 Problems.pdf"
+  "Chapter 2 Problems.toc"
   (rewritten before read)

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.8.23)  26 MAY 2026 21:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.8.23)  26 MAY 2026 21:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/ddent/OneDrive/Documents/Real-Analysis/Problems/Problems.tex
-(c:/Users/ddent/OneDrive/Documents/Real-Analysis/Problems/Problems.tex
+**"c:/Users/ddent/OneDrive/Documents/Real-Analysis/Chapter 3 Problems/Chapter 3 Problems.tex"
+(c:/Users/ddent/OneDrive/Documents/Real-Analysis/Chapter 3 Problems/Chapter 3 Problems.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\ddent\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
@@ -190,8 +190,8 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count286
 \l__pdf_internal_box=\box100
-) (Problems.aux)
-\openout1 = `Problems.aux'.
+) (Chapter 3 Problems.aux)
+\openout1 = `"Chapter 3 Problems.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
@@ -207,7 +207,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
- (Problems.toc
+ (Chapter 3 Problems.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (C:\Users\ddent\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -215,61 +215,35 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (C:\Users\ddent\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-{C:/Users/ddent/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3])
+))
 \tf@toc=\write3
-\openout3 = `Problems.toc'.
+\openout3 = `"Chapter 3 Problems.toc"'.
 
- [4]
-Chapter 1.
-[5
-
-] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]
-Chapter 2.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1320.
-(C:\Users\ddent\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1320.
- [47
-
-] [48] [49]
-Overfull \vbox (12.55003pt too high) has occurred while \output is active []
+ [1
 
 
-Overfull \vbox (12.55003pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (16.90007pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (16.90007pt too high) has occurred while \output is active []
-
- [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63]
+{C:/Users/ddent/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 Chapter 3.
-[64
+[2
 
-] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] (Problems.aux)
+] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] (Chapter 3 Problems.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2366 strings out of 474486
- 35698 string characters out of 5743755
- 1943542 words of memory out of 5000000
- 24664 multiletter control sequences out of 15000+600000
- 568441 words of font info for 75 fonts, out of 8000000 for 9000
+ 2318 strings out of 474486
+ 35155 string characters out of 5743755
+ 1936542 words of memory out of 5000000
+ 24622 multiletter control sequences out of 15000+600000
+ 565185 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,65p,406b,285s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ddent\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Problems.pdf (78 pages, 308148 bytes).
+ 56i,10n,65p,349b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/ddent/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Chapter 3 Problems.pdf" (16 pages, 173686 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
