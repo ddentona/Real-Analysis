@@ -112,3 +112,14 @@
 \contentsline {subsection}{\numberline {3.34.1}Solution}{68}{}%
 \contentsline {section}{\numberline {3.35}Exercise 3.36}{69}{}%
 \contentsline {subsection}{\numberline {3.35.1}Solution}{69}{}%
+\contentsline {section}{\numberline {3.36}Problem 3.38}{70}{}%
+\contentsline {subsection}{\numberline {3.36.1}Solution}{70}{}%
+\contentsline {section}{\numberline {3.37}Problem 3.40}{71}{}%
+\contentsline {subsection}{\numberline {3.37.1}Solution (a)}{71}{}%
+\contentsline {subsection}{\numberline {3.37.2}Solution (b)}{72}{}%
+\contentsline {section}{\numberline {3.38}Problem 3.42}{73}{}%
+\contentsline {subsection}{\numberline {3.38.1}Solution (a): Unbounded}{73}{}%
+\contentsline {subsection}{\numberline {3.38.2}Solution (b): Bounded}{73}{}%
+\contentsline {section}{\numberline {3.39}Problem 3.44}{75}{}%
+\contentsline {subsection}{\numberline {3.39.1}Solution}{75}{}%
+\contentsline {section}{\numberline {3.40}Problem 3.45}{77}{}%

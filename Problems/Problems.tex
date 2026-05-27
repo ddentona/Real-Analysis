@@ -7,6 +7,9 @@
 
 \begin{document}
 \renewcommand\qedsymbol{OE$\Delta$}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\mathif}{\text{if }}
+\newcommand{\seq}[2][n]{\ensuremath{(#2 _{#1})}}
 
 \tableofcontents
 \pagebreak
@@ -2083,4 +2086,213 @@ We can prove this in a similar way to proving there are uncountably many irratio
         %         =   \frac{11a_2 + 5a_1}{16}
         % \end{align}
         
+\section{Problem 3.38}
+    Give an example of a monotone sequence that is not Cauchy.
+
+    \subsection{Solution}
+        Define $(a_n)$.
+        \begin{equation}
+            a_n := n
+        \end{equation}
+
+        It is monotonically increasing, but it diverges.
+\pagebreak
+
+\section{Problem 3.40}
+    For each of the following, give an example of a sequence with that property or prove no such sequences exist.
+    \begin{enumerate}[label=(\alph*)]
+        \item   A Cauchy sequence with an unbounded subsequence.
+        \item   An unbounded sequence with a Cauchy subsequence.
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        \begin{proof}
+            Recall the definition of a Cauchy sequence.
+            \begin{equation}
+                \forall\varepsilon > 0, \exists N : \forall m, n > N, \left| a_m - a_n \right| < \varepsilon
+            \end{equation}
+
+            We can rewrite the last part of this.
+            \begin{gather}
+                -\varepsilon < a_m - a_n < \varepsilon\\
+                a_n - \varepsilon < a_m < a_n + \varepsilon
+            \end{gather}
+
+            This means that $a_m$ is bounded by the other possible $a_n$.
+            There are values not bounded by this restriction, the ones where $m \leq N$.
+            Suppose we found the maximum value of $a_m$ where $m \leq N$.
+            \begin{equation}
+                S = \left\{ a_1, a_2, \dots, a_N \right\}
+            \end{equation}
+
+            Suppose we add $a_n + \varepsilon$ and $a_n - \varepsilon$ to this and set $\varepsilon = 1$.
+            \begin{multline}
+                S   =   \left\{ a_1, a_2, \dots, a_N, a_n - \varepsilon, a_n + \varepsilon \right\}\\
+                    =   \left\{ a_1, a_2, \dots, a_N, a_n - 1, a_n + 1 \right\}
+            \end{multline}
+
+            We can define a maximum $U$ and a minimum $L$ value of this, which set bounds for $(a_n)$.
+            \begin{align}
+                U &= \max(S)\\
+                L &= \min(S)
+            \end{align}
+
+            As such, for all $m$, $L \leq a_m \leq U$.
+            Suppose we call our subsequence $(a_{n_k})$.
+            Members of $(a_{n_k})$ will all be members of $(a_n)$.
+            This means that for all $n_k$, $L \leq a_{n_k} \leq U$.
+            This means that it is bounded.
+        \end{proof}
+
+    \subsection{Solution (b)}
+        I will define a sequence whose Cauchy subsequence is only the odd terms.
+        \begin{equation}
+            a_n := n^{(-1)^n}
+        \end{equation}
+\pagebreak
+
+\section{Problem 3.42}
+    Suppose the sequence $(x_n)$ is the sum of two other sequences, $(y_n)$ and $(z_n)$.
+    That is $x_n = y_n + z_n$ for all $n$.
+    If $(x_n)$ is bounded, and $(y_n)$ and $(z_n)$ are both monotone, must $(x_n)$ be convergent?
+    What if $(y_n)$ and $(z_n)$ are also bounded?
+
+    \subsection{Solution (a): Unbounded}
+        In the first case, $(x_n)$ must not necessarily be convergent.
+        Suppose we define two new sequences.
+        \begin{gather}
+            \delta y_n := y_{n + 1} - y_{n}\\
+            \delta z_n := z_{n + 1} - z_{n}
+        \end{gather}
+
+        From here, we can define $\delta x_n$.
+        \begin{equation}
+            \delta x_n = \delta y_n + \delta z_n
+                =   y_{n + 1} - y_{n} + z_{n + 1} - z_{n}
+                =   x_{n + 1} - x_n
+        \end{equation}
+
+        For $(x_n)$ to converge, $(x_n)$ must be Cauchy.
+        \begin{gather}
+            \forall \varepsilon > 0, \exists N : \forall m, n > N, \abs{x_m - x_n} < \varepsilon
+        \end{gather}
+
+        It's possible that $m = n + 1$.
+        \begin{gather}
+            \abs{x_{n + 1} - x_n} = \abs{\delta x} 
+                =   \abs{\delta y_n + \delta z_n}
+                <   \varepsilon
+        \end{gather}
+
+        Now, suppose that $\delta y_n = \delta z_n = \frac{\varepsilon}{2}$.
+        \begin{equation}
+            \abs{\delta x}  =   \abs{\delta y_n + \delta z_n}
+                =   \abs{\frac{\varepsilon}2 + \frac{\varepsilon}2}
+                =   \abs{\varepsilon}
+                =   \varepsilon
+        \end{equation}
+
+        This would not be possible if $(x_n)$ has to be convergent.
+        Therefore, $(x_n)$ does not have to be convergent.
+
+    \subsection{Solution (b): Bounded}
+        Recall the monotone convergence theorem.
+        It says that if a sequence is monotone, it converges if and only if it is bounded.
+        This means that $(y_n)$ and $(z_n)$ are also Cauchy.
+        \begin{gather} \label{eq:3.52}
+            \forall \varepsilon > 0, \exists N_y : \forall m, n > N_y, \abs{y_m - y_n} < \varepsilon\\
+            \label{eq:3.53}
+            \forall \varepsilon > 0, \exists N_z : \forall m, n > N_z, \abs{z_m - z_n} < \varepsilon
+        \end{gather}
+
+        We can add the last terms of these two together, then use the Triangle Inequality.
+        In this case, set $m, n > N = \max\{N_y, N_z\}$.
+        \begin{align}
+            &\forall \varepsilon > 0, \exists N_y : \forall m, n > N\\
+            \varepsilon &>  \abs{y_m - y_n} + \abs{z_m - z_n}
+                \geq    \abs{y_m - y_n + z_m - z_n}\\
+            \varepsilon &>  \abs{y_m + z_m - y_n - z_n}
+                =   \abs{x_m - x_n}
+        \end{align}
+
+        Put this together with (\ref{eq:3.52}) or (\ref{eq:3.53}).
+        \begin{equation}
+            \forall \varepsilon > 0, \exists N_y : \forall m, n > N, \abs{x_m - x_n} < \varepsilon
+        \end{equation}
+
+        This means that \seq{x} is Cauchy, which means that it converges.
+
+    \subsection*{Scratch Work (b)}
+        MCT says $y_n$ and $z_n$ both converge.
+        \begin{gather*}
+            \forall \varepsilon > 0, \exists N : \forall n > N, \abs{y_n - y} < \varepsilon\\
+            \forall \varepsilon > 0, \exists N : \forall n > N, \abs{z_n - z} < \varepsilon\\
+            \abs{y_n - y} + \abs{z_n - z} < 2\varepsilon\\
+            \text{Cauchy: } 2\varepsilon > \abs{y_m - y_n} + \abs{z_m - z_n} \geq \abs{y_m - y_n + z_m - z_n}\\
+            \abs{y_m - y_n + z_m - z_n} = \abs{y_m + z_m - y_n - z_n}
+                =   \abs{x_m - x_n}
+        \end{gather*}
+
+        $(x_n)$ is Cauchy, so it converges.
+\pagebreak
+
+\section{Problem 3.44}
+    Prove that if \seq{a} is a bounded sequence which does not converge, then it must contain two subsequences, both of which converge, but which converge to different values. 
+
+    \subsection{Solution}
+        \begin{proof}
+            Bolzano-Weierstrass says every bounded sequence has a convergent subsequence.
+            Naturally, \seq{a} also has one, which we could call \seq[n_k]{a}.
+            Suppose we call the set of all $n_k$, $\mathbb{N}_k$.
+            We can create three sets from these two sequences.
+            \begin{gather*}
+                A = \{a_n | n \in \mathbb{N}\}\\
+                A_k = \{a_{n_k} | n_k \in \mathbb{N}_k\}\\
+                A_k^c = \{a_n | n \in \mathbb{N} \backslash \mathbb{N}_k\}
+            \end{gather*}
+
+            Let $(m_j)_{j=1}^\infty$ be the increasing enumeration of $\mathbb N \setminus \mathbb N_k$.
+            Then $(a_{m_j})_{j=1}^\infty$ is the sequence of terms of $(a_n)$ not contained in $(a_{n_k})$.
+
+            For \seq{a} not to converge, \seq[m_j]{a} must be an infinite sequence.
+            \begin{proof}[Proof by Contradiction]
+                Suppose for contradiction that \seq[m_j]{a} is finite.
+                That means that \seq[j]{m} is finite.
+                Since it is finite, it has a maximum member, which we call $M$.
+                For all $m > M$, $a_m \notin \seq[m_j]{a}$.
+                By definition, for all $m > M$, $a_m \in \seq[n_k]{a}$.
+                \seq[n_k]{a} converges, which we can use the definition of.
+                \begin{equation}
+                    \forall \varepsilon > 0, \exists N : \forall n_k > N, \abs{a_{n_k} - a} < \varepsilon
+                \end{equation}
+
+                For some values of $N$, $N < M$, so if $n > M$, then $n > N$.
+                For others, $N > M$, so if $n > N$, then $n > M$.
+                In either case, since \seq[m_j]{a} converges, we can rewrite its convergence definition to include $M$.
+                \begin{equation}
+                    \forall \varepsilon > 0, \exists N : \forall n > \begin{cases} N & \mathif N > M\\ M & \mathif M \geq N \end{cases}, \abs{a_n - a} < \varepsilon
+                \end{equation}
+
+                If we add back the values of \seq[m_j]{a}, this does not change. 
+                Quite the opposite, it would say that \seq{a} converges. 
+                This contradicts that \seq{a} does not converge. 
+                Ergo, our intial assumption is wrong, and \seq[m_j]{a} is not finite.
+            \end{proof}
+
+            Past that, since \seq{a} is bounded, \seq[m_j]{a} is also bounded.
+            This means that \seq[m_j]{a} either is convergent or has a convergent subsequence.
+            If \seq[m_j]{a} converges to the same value as \seq[n_k]{a}, all subsequences of \seq{a} converge to the same number, which would mean that \seq{a} converges to that number, which means that \seq{a} converges, which we know cannot be the case.
+            That would mean that \seq[m_j]{a} converges to something else.
+
+            If \seq[m_j]{a} does not converge, it's possible that its convergent subsequence converges to the same value as \seq[n_k]{a}, but then we'd end up with another bounded, infinite subsequence.
+            That could go on infinitely.
+            If all of these converge to the same number, that means that all subsequences of \seq{a} converge to the same number, so \seq{a} converges, which is not the case.
+            Ergo, one (or more) of them has to converge to a different number, which gives us two subsequences that converge to different limits.
+        \end{proof}
+\pagebreak
+
+\section{Problem 3.45}
+    Let \seq{a} be the sequence where $a_1 = 1$ and, for each $n > 1$, $a_n = a_{n-1} + \frac{1}{n^2}$.
+    In 1734, Leonhard Euler famously proved that \seq{a} converges to $\frac{\pi^2}{6}$. Now let \seq{b} be the sequence where $b_1 = 1$ and, for each $n > 1$, $b_n = b_{n-1} + \frac{1}{n^3}$.
+    Use Euler's result to prove that \seq{b} converges.
 \end{document}
