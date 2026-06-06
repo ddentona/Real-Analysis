@@ -5,7 +5,7 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 
-\newenvironment{case}[2]{\newline\textbf{Case #1: #2.}}{}
+\newenvironment{case}[2]{\par\textbf{Case #1: #2.}}{}
 
 \begin{document}
 \renewcommand\qedsymbol{OE$\Delta$}
@@ -445,12 +445,7 @@
     Prove that if $\sum_{k = 1}^{\infty} a_k$ converges absolutely to $L$, then any rearrangement of this sum also converges to $L$. 
 
     \subsection{Solution}
-        $\sum_{k = 1}^{\infty} a_k$ converges absolutely to $L$.
-        This means that $\sum_{k = 1}^{\infty} \abs{a_k}$ converges to some $M \in \mathbb{R}$.
-        \begin{equation}
-            \sum_{k = 1}^{\infty} a_k \to L;
-            \sum_{k = 1}^{\infty} \abs{a_k} \to M
-        \end{equation}
+        
 
 \section{Problem 4.27}
     Prove that if each $a_k \geq 0$ and $\sum_{k = 1}^{\infty} a_k = \infty$, then any rearrangement of this sum also diverges to $\infty$. 
@@ -481,4 +476,40 @@
         \item   Explain why this proves the theorem.
     \end{enumerate}
 
+    \subsection{Solution (a)}
+        By subtracting reciprocals of natural numbers, we will be subtracting consecutive terms of the Harmonic Series.
+        The Harmonic series diverges, so for the rational number $\frac{p}{q}$ there will be a point P at which $\sum_{k=1}^{P} \frac{1}{k} < \frac{p}{q} < \sum_{k=1}^{P+1} \frac{1}{k}$.
+
+    \subsection{Solution (b)}
+        \begin{proof}
+            On any given reciprocal subtracted, there is going to be an initial rational number $\frac{p_1}{q_1}$ which we subtract $\frac{1}{n}$ from to get the unreduced rational number $\frac{p_2}{q_2}$.
+            \begin{gather}
+                \frac{p_2}{q_2} = \frac{p_1}{q_1} - \frac{1}{n}
+                    =   \frac{np_1 - q_1}{nq_1}
+            \end{gather}
+
+            Since $\frac{p_2}{q_2}$ is unreduced, we can say that $q_2 = n q_1$.
+            \begin{gather}
+                \frac{p_2}{q_2} = \frac{np_1 - q_1}{nq_1}\\
+                p_2 = np_1 - q_1
+            \end{gather}
+
+            Furthermore, $\frac{p_1}{q_1}$ lies in between two reciprocals of natural numbers, which we can extrapolate on.
+            \begin{gather}
+                \frac{1}{n-1} > \frac{p_1}{q_1}\\
+                q_1 > n p_1 - p_1\\
+                p_1 > n p_1 - q_1
+            \end{gather}
+
+            We can put that into our above equation for $p_2$.
+            \begin{equation}
+                p_2 < p_1
+            \end{equation}
+
+            Even if the rational number is reduced, this will still be the case, because the new $p_2$ will be less than the initial $p_2$.
+        \end{proof}
+
+    \subsection{Solution (c)}
+        This is because eventually, the rational number will be reduced to a point where $\frac{1}{n} < \frac{p}{q} < \frac{1}{n - 1}$.
+        After that point, the numerator will start reducing, and keep reducing until it hits 1.
 \end{document}

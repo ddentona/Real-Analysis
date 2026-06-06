@@ -28,3 +28,6 @@
 \contentsline {subsection}{\numberline {4.16.1}Solution}{18}{}%
 \contentsline {section}{\numberline {4.17}Problem 4.27}{18}{}%
 \contentsline {section}{\numberline {4.18}Problem 4.29}{19}{}%
+\contentsline {subsection}{\numberline {4.18.1}Solution (a)}{20}{}%
+\contentsline {subsection}{\numberline {4.18.2}Solution (b)}{20}{}%
+\contentsline {subsection}{\numberline {4.18.3}Solution (c)}{20}{}%

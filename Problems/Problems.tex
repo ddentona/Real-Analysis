@@ -5,6 +5,8 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 
+\newenvironment{case}[2]{\par\textbf{Case #1: #2.}}{}
+
 \begin{document}
 \renewcommand\qedsymbol{OE$\Delta$}
 \newcommand{\abs}[1]{\left| #1 \right|}
@@ -2337,4 +2339,499 @@ We can prove this in a similar way to proving there are uncountably many irratio
             i^3 \geq i^2\\
             i \geq 1
         \end{gather*}
+
+\chapter{Series not on TV}
+
+\section{Problem 4.1}
+    Determine whether each of the following converges conditionally, converges absolutely, or diverges. 
+    You do not need  to prove your answers, but state which of the following tests gives the answers: the $k^{\rm th}$-term test, the geometric series test, and the alternating series test.
+    \begin{multicols}{3}
+        \begin{enumerate}[label=(\alph*)]
+            \item   $\sum_{k = 1}^{\infty}  (-1)^k \frac{1}{\sqrt{k}}$
+            \item   $\sum_{k = 1}^{\infty}  (-1)^k \frac{k}{k + 7}$
+            \item   $\sum_{k = 1}^{\infty}  \frac{1}{(\ln(4))^k}$
+            \item   $\sum_{k = 1}^{\infty}  \frac{1}{k!}$
+            \item   {\scriptsize $\sum_{k = 1}^{\infty}  (\sqrt{k + 1} - \sqrt{k})$}
+            \item   $\sum_{k = 1}^{\infty}  \frac{1}{2}$
+            \item   $\sum_{k = 1}^{\infty}  (-1)^k \frac{1}{\sqrt[3]{k}}$
+            \item   $\sum_{k = 53}^{\infty} \frac{\ln(k)}{\ln(\ln(k))}$
+            \item   $\sum_{k = 7}^{\infty}  \left( \frac{2}{k} + \frac{3}{k^2} \right)$
+        \end{enumerate}
+    \end{multicols}
+
+\section{Problem 4.3}
+    Prove that if $\sum_{k = 1}^{\infty} \abs{a_k}$ converges, then $\sum_{k = 1}^{\infty} a_k$ converge too.
+    This is Propostion 4.18.
+
+\section{Problem 4.5}
+    Give an example of a series where $\sum_{k = 1}^{\infty} a_k$ converges but $\sum_{k = 1}^{\infty} a_{2k}$ diverges.
+
+\section{Problem 4.7}
+    Give an example of a series $\sum_{k = 1}^{\infty} a_k$ where:
+    \begin{multicols}{3}
+        \begin{itemize}
+            \item {\small $\sum_{k = 1}^{\infty} a_k$ converges,}
+            \item {\small $\sum_{k = 1}^{\infty} a_k^2$ diverges}
+            \item $\sum_{k = 1}^{\infty} a_k^3$ converges
+        \end{itemize}
+    \end{multicols}
+
+\section{Problem 4.9}
+    The geometric series test (Proposition 4.9) says  that a geometric series diverges if $\abs{r} \geq 1$. 
+    Recall that a series can  diverge to $\infty$, to $-\infty$, or can be ``does not exist.'' 
+    Which form of divergence is it for a geometric series? 
+    Note that your answer may depend on r. 
+
+\section{Problem 4.11}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Find a way to write 77.77777777... as a geometric series, and then prove this number is rational by using the geometric series test to write this number as a fraction with integers in the numerator and denominator.
+        \item   Write 77.77777777... as a different geometric series, and use the geometric series test to write this number as a fraction with integers in the numerator and denominator. Are your two fractions the same?
+        \item   A number $q$ has a repeating decimal if the non-integer portion of its decimal expansion is repetitive. For example, 72.578578578578578... has a repeating decimal. Prove that if a number $q$ has a repeating  decimal, then $q$ is rational. 
+    \end{enumerate}
+\pagebreak
+
+\section{Problem 4.13}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Prove that if $(k a_k)$ converges to a nonzero real number $L$, then  the series $\sum_{k = 1}^{\infty} a_k$ diverges. Give an example to show that the  converse is false. 
+        \item   Prove that if $(k^2 a_k)$ converges (to any real number), then the  series $\sum_{k = 1}^{\infty} a_k$ converges. Give an example to show that the  converse is false. 
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        \begin{proof}
+            We know that \seq[k]{ka} converges to a nonzero $L$.
+            \begin{equation}
+                \forall\varepsilon > 0, \exists N : \forall k > N, \abs{ka_k - L} < \varepsilon
+            \end{equation}
+    
+            It is very much possible that $\varepsilon = \frac{\abs{L}}{2}$.
+            We can also apply the reverse triangle inequality and isolate $\abs{a_k}$.
+            \begin{gather}
+                \frac{\abs{L}}{2} = \varepsilon > \abs{ka_k - L} \geq \abs{\abs{ka_k} - \abs{L}}\\
+                \frac{\abs{L}}{2} > \abs{ka_k} - \abs{L} > -\frac{\abs{L}}{2}\\
+                \frac{3\abs{L}}{2} > \abs{ka_k} > \frac{\abs{L}}{2}\\
+                \frac{3\abs{L}}{2} > k\abs{a_k} > \frac{\abs{L}}{2}\\
+                \frac{3\abs{L}}{2k} > \abs{a_k} > \frac{\abs{L}}{2k} = \frac{\abs{L}}{2} \cdot \frac{1}{k}
+            \end{gather}
+    
+            Because of its convergence to $L$, beyond a certain point, $a_k$ has the same sign as $L$.
+            If we only work beyond that point, we can remove the absolute values.
+            This gives us two cases.
+            First is the case where $L > 0$.
+            \begin{gather}
+                \frac{3L}{2k} > a_k > \frac{L}{2} \cdot \frac{1}{k}
+            \end{gather}
+    
+            The other case is the one where $L < 0$.
+            \begin{gather}
+                -\frac{3L}{2k} > -a_k > -\frac{L}{2} \cdot \frac{1}{k}
+            \end{gather}
+    
+            We can substitute in a new sequence \seq[k]{b} in case 2 where for any $k$, $b_k = -a_k$ to get back to the point described in case 1.
+            Since it's the same point, I won't be replacing $a_k$ with $b_k$.
+            \begin{gather}
+                \frac{3L}{2k} > a_k > \frac{L}{2} \cdot \frac{1}{k}
+            \end{gather}
+    
+            Now, recall the harmonic series.
+            \begin{equation}
+                \sum_{k=1}^{\infty} \frac{1}{k} \to \infty
+            \end{equation}
+    
+            We can multiply this in both cases by $\frac{L}{2}$.
+            \begin{equation}
+                \sum_{k=1}^{\infty} \frac{L}{2} \cdot \frac{1}{k} \to \infty
+            \end{equation}
+            
+            Since the harmonic series diverges and \seq[k]{a} is always greater than our above alteration of the harmonic series, $\sum_{k = 1}^{\infty} a_k$ diverges.
+        \end{proof}
+
+        For an example of how the converse could be false, consider the series $\sum_{k = 1}^{\infty} k$.
+        It diverges, and the components of it, even when multiplied by $k$, also diverge.
+    
+    \subsection{Solution (b)}
+        \begin{proof}
+            We know that \seq[k]{k^2 a} converges to a real number $L$.
+            \begin{equation}
+                \forall\varepsilon > 0, \exists N : \forall k > N, \abs{k^2 a_k - L} < \varepsilon
+            \end{equation}
+    
+            We consider this based on whather $L$ is or is not equal to zero.
+            \begin{case}{1}{$L \neq 0$}
+                If $L \neq 0$, it is very much possible that $\varepsilon = \frac{\abs{L}}{2}$.
+                We can also apply the reverse triangle inequality and isolate $\abs{a_k}$.
+                \begin{gather}
+                    \frac{\abs{L}}{2} = \varepsilon > \abs{k^2 a_k - L} \geq \abs{\abs{k^2 a_k} - \abs{L}}\\
+                    \frac{\abs{L}}{2} > \abs{k^2 a_k} - \abs{L} > -\frac{\abs{L}}{2}\\
+                    \frac{3\abs{L}}{2} > \abs{k^2 a_k} > \frac{\abs{L}}{2}\\
+                    \frac{3\abs{L}}{2} > k^2\abs{a_k} > \frac{\abs{L}}{2}\\
+                    \frac{3\abs{L}}{2k^2} = \frac{3\abs{L}}{2} \cdot \frac{1}{k^2} > \abs{a_k} > \frac{\abs{L}}{2k^2} = \frac{\abs{L}}{2} \cdot \frac{1}{k^2}
+                \end{gather}
+
+                By the series p-test, we can recognize the convergence of $\sum_{k = 1}^{\infty} \frac{1}{k^2}$, and multiply that by a constant.
+                \begin{gather}
+                    \sum_{k = 1}^{\infty} \frac{1}{k^2} \to 0\\
+                    \sum_{k = 1}^{\infty} \frac{3\abs{L}}{2} \cdot \frac{1}{k^2} \to 0
+                \end{gather}
+
+                By the comparison test, this means that $\sum_{k=1}^{\infty} \abs{a_k}$ converges.
+                This in turn means that $\sum_{k=1}^{\infty} a_k$ converges.
+            \end{case}
+
+            Now for the other case. 
+            \begin{case}{2}{$L = 0$}
+                We can rewrite the initial definition of convergence based on this.
+                \begin{equation}
+                    \forall\varepsilon > 0, \exists N : \forall k > N, \abs{k^2 a_k} < \varepsilon
+                \end{equation}
+
+                % Recall that $k > 0$, and by extension that $k^2 > 0$.
+                % \begin{gather}
+                %     k^2 > 0\\
+                %     k^2 \abs{a_k} > \abs{a_k}
+                % \end{gather}
+
+                % This means that \seq[]{\abs{a_k}} converges to zero.
+                Now, suppose that $\varepsilon = 1$.
+                Solve for $\abs{a_k}$.
+                \begin{gather}
+                    \abs{k^2 a_k} < 1\\
+                    \abs{a_k} < \frac{1}{k^2}
+                \end{gather}
+
+                As with earlier, this means the sum converges.
+            \end{case}
+        \end{proof}
+
+        For the example disproving the converse, consider \seq[]{\sum_{k=1}^{\infty}k^{-\frac{3}{2}}}.
+        This converges.
+        However, $(k^2 a_k)$ is equal to $(\sqrt{k})$, which diverges to infinity.
+    \pagebreak
+
+\section{Problem 4.15}
+    Prove the Cauchy condensation test. 
+    That is, suppose that \seq{a} is a decreasing sequence for which $a_k \to 0$. 
+    Prove that $\sum_{k=1}^{\infty} a_k$ converges if and only if $\sum_{k=1}^{\infty} 2^k a_{2^k}$ converges. 
+
+    \subsection{Solution}
+        First, prove that if $\sum_{k=1}^{\infty} a_k$ converges, $\sum_{k=1}^{\infty} 2^k a_{2^k}$ converges.
+        \begin{proof}
+            Start with convergent $\sum_{k=1}^{\infty} a_k$ for decreasing $a_k \to 0$.
+            We can recall the definition of the two.
+            \begin{gather}
+                \forall \varepsilon > 0, \exists N : \forall k > N, \abs{a_k} < \varepsilon\\
+                a_{k + 1} < a_{k}\\
+                \sum_{k=1}^{\infty} a_k \to L_1
+            \end{gather}
+
+            Here, we can try grouping terms in \seq[k]{a}.
+            There is an inequality that is extrapolated from this being a decreasing sequence.
+            \begin{gather}
+                \forall n \in \mathbb{N}, 2^{n+1} - 1 \geq j \geq 2^n \implies a_{2^n} \geq a_j \geq a_{2^{n+1} - 1}\\
+                \sum_{k=2^n}^{2^{n+1} - 1} a_k \geq 2^{n} a_{2^{n + 1}} \geq 0
+            \end{gather}
+
+            We can furthermore sum this over $n$.
+            \begin{gather}
+                \sum_{n = 1}^{\infty} \sum_{k=2^n}^{2^{n+1} - 1} a_k \geq \sum_{n = 1}^{\infty} 2^{n} a_{2^{n + 1}} \geq 0
+            \end{gather}
+
+            The former term is equal to the converging $\sum_{k=1}^{\infty} a_k$.
+            Therefore, the latter term also converges.
+            The latter term can be turned into $\sum_{k=1}^{\infty} 2^k a_{2^k}$ by adding a few terms.
+            \begin{equation}
+                \sum_{k=1}^{\infty} 2^k a_{2^k} = 2*\sum_{n = 1}^{\infty} 2^{n} a_{2^{n + 1}} + 2 * a_2
+                    =   \sum_{n = 1}^{\infty} 2^{n + 1} a_{2^{n + 1}} + 2 * a_2
+            \end{equation}
+
+            None of these operations (multiplying by 2 and adding $2 * a_2$) compromise convergence.
+            Ergo, $\sum_{k=1}^{\infty} 2^k a_{2^k}$ converges.
+        \end{proof}
+
+        Next, prove that if $\sum_{k=1}^{\infty} 2^k a_{2^k}$ converges, then $\sum_{k=1}^{\infty} a_k$ converges.
+        \begin{proof}
+            We begin with the earlier statement.
+            \begin{gather}
+                \forall n \in \mathbb{N}, 2^{n+1} - 1 \geq j \geq 2^n \implies a_{2^n} \geq a_j \geq a_{2^{n+1} - 1}\\
+                2^{n} a_{2^{n}} \geq \sum_{k=2^n}^{2^{n+1} - 1} a_k \geq 0
+            \end{gather}
+
+            Sum this over $n$.
+            \begin{gather}
+                \sum_{n=1}^{\infty} 2^{n} a_{2^{n}} \geq \sum_{n=1}^{\infty} \sum_{k=2^n}^{2^{n+1} - 1} a_k \geq 0
+            \end{gather}
+
+            The latter term converges. 
+            As described earlier, it is equal to the sum over $\mathbb{N}$ of \seq[k]{a}.
+            \begin{equation}
+                \sum_{n=1}^{\infty} \sum_{k=2^n}^{2^{n+1} - 1} a_k = \sum_{k=1}^{\infty} a_k
+            \end{equation}
+
+            Therefore, $\sum_{k=1}^{\infty} a_k$ converges.
+        \end{proof}
+    \pagebreak
+
+\section{Problem 4.17}
+    Prove the ratio test via the following steps. 
+    Given a series $\sum_{k = 1}^{\infty} a_k$ with $a_k = 0$, assume that 
+    \begin{equation*}
+        \lim_{k \to \infty} \abs{\frac{a_{k+1}}{a_{k}}} =: r < 1
+    \end{equation*}
+    We will prove that the series converges absolutely.
+    \begin{enumerate}[label=(\alph*)]
+        \item   Let $q$ be such that $r < q < 1$. Explan why there is some $N$ such that $n \geq N$ implies that $\abs a_{k+1} \leq \abs{a_k} \cdot q$.
+        \item   Explain why $\sum_{k = 1}^{\infty} \abs{a_N} \cdot q^k$ necessarily converges.
+        \item   Finally, use part (b) to prove that $\sum_{k = 1}^{\infty} \abs{a_k}$ converges.
+    \end{enumerate}
+    \pagebreak
+
+\section{Problem 4.18}
+    Prove the root test via the following steps. 
+    Given a series $\sum_{k=1}^{\infty} a_k$ where each $a_k \geq 0$, assume that the limit $\lim_{k \to \infty}(a_k)^{1/k}$ exists. 
+    Call this limit $\rho$. 
+    Then this series converges if $\rho < 1$ and  diverges if $\rho > 1$. 
+    (The test is inconclusive if $\rho = 1$.)  
+    \begin{enumerate}[label=(\alph*)]
+        \item   Suppose $\rho < 1$. Let $\varepsilon = \frac{1 - \rho}{2}$ and $\rho_1 = \rho + \varepsilon$. Prove that there is some $N$ for which $(a_n)^{1/n} < \rho_1$ for all $n>N$.
+        \item   Prove that $\sum_{k = N}^{\infty} a_k$ converges by comparing it to a geometric series. Then conclude that $\sum_{k = 1}^{\infty} a_k$ also converges. 
+        \item   Suppose $\rho > 1$. Let $\varepsilon = \frac{\rho - 1}{2}$ and $\rho_2 = \rho - \varepsilon$. Prove that there is some $N$ for which $(a_n)^{1/n} > \rho_2$ for all $n>N$.
+        \item   Prove that $\sum_{k = N}^{\infty} a_k$ diverges by comparing it to a geometric series. Then conclude that $\sum_{k = 1}^{\infty} a_k$ also diverges.
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        Begin with the limit from earlier and recall its convergence definition (traditional and Cauchy).
+        \begin{gather}
+            \lim_{k \to \infty}(a_k)^{1/k} = \rho < 1\\
+            \forall\varepsilon > 0, \exists N: \forall n > N, \abs{(a_n)^{1/n} - \rho} < \varepsilon\\
+            \forall\varepsilon > 0, \exists N: \forall m, n > N, \abs{(a_m)^{1/m} - (a_n)^{1/n}} < \varepsilon
+        \end{gather}
+
+        Expand the first absolute value, then isolate $(a_n)^{1/n}$.
+        \begin{gather}
+            -\varepsilon < (a_n)^{1/n} - \rho < \varepsilon\\
+            \rho - \varepsilon < (a_n)^{1/n} < \rho + \varepsilon
+        \end{gather}
+    \pagebreak
+
+\section{Problem 4.20}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Give an example of two divergent series $\sum_{k=1}^{\infty} a_k$ and $\sum_{k=1}^{\infty} b_k$, such that $\sum_{k=1}^{\infty} a_k b_k$ converges. 
+        \item   Give an example of two convergent series $\sum_{k=1}^{\infty} a_k$ and $\sum_{k=1}^{\infty} b_k$, such that $\sum_{k=1}^{\infty} a_k b_k$ diverges. 
+        \item   Prove that if $\sum_{k=1}^{\infty} a_k$ and $\sum_{k=1}^{\infty} b_k$ converge absolutely, then $\sum_{k=1}^{\infty} a_k b_k$ converges absolutely. 
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        \begin{gather}
+            a_k = b_k = \frac{1}{k}\\
+            a_k b_k = \frac{1}{k^2}
+        \end{gather}
+
+    \subsection{Solution (b)}
+        \begin{gather}
+            a_k = b_k = (-1)^{k + 1} \frac{1}{\sqrt{k}}\\
+            a_k b_k = \frac{1}{k}
+        \end{gather}
+
+    \subsection{Solution (c)}
+        \begin{proof}
+            Note that these two converge absolutely.
+            This means that their absolute value sums also converge.
+            \begin{gather}
+                \sum_{k = 1}^{\infty} \abs{a_k} \to L_1\\
+                \sum_{k = 1}^{\infty} \abs{b_k} \to L_2
+            \end{gather}
+
+            Since they converge, we can use the contrapositive of the $k^{th}$-term test to determine what they converge to.
+            \begin{gather}
+                a_k \to 0; \abs{a_k} \to 0\\
+                b_k \to 0; \abs{b_k} \to 0
+            \end{gather}
+
+            Take the member absolute value functions and multiply them together.
+            \begin{equation}
+                \abs{a_k} \abs{b_k} = \abs{a_k b_k} \to 0
+            \end{equation}
+
+            Since they converge to 0, there is a point after which $\abs{a_k} < 1$ and $\abs{b_k} < 1$.
+            \begin{gather} \label{eq:4.48}
+                \exists N \in \mathbb{N} : \forall k > N, \abs{a_k} < 1\\
+                \exists N \in \mathbb{N} : \forall k > N, \abs{b_k} < 1
+            \end{gather}
+
+            We can multiply the last term of (\ref{eq:4.48}) by $\abs{b_k}$ on both sides.
+            \begin{equation}
+                \abs{b_k} > \abs{a_k} \abs{b_k} = \abs{a_k b_k}
+            \end{equation}
+
+            By the comparison test, this means that the sum of $(\abs{a_k b_k})$ over $k$ converges.
+            From that, we can conclude that the sum of $(a_k b_k)$ over $k$ converges.
+            \begin{gather}
+                \sum_{k = 1}^{\infty} \abs{a_k b_k} \to L_3\\
+                \sum_{k = 1}^{\infty} a_k b_k \to L_4
+            \end{gather}
+        \end{proof}
+    \pagebreak
+
+\section{Problem 4.22}
+    Consider the sum $\sum_{k = 1}^{\infty} a_k$, and define $s_n$ to be  this series' $n^{th}$ partial sum; that is, $s_n = \sum_{k = 1}^{\infty} a_k$. 
+    The series $\sum_{k=1}^{\infty} a_k$ is called Cesaro summable if the following converges:
+    \begin{equation*}
+        \lim_{n \to \infty} \frac{s_1 + s_2 + \dots + s_n}{n}
+    \end{equation*}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Prove that if $\sum_{k = 1}^{\infty} a_k$ converges, then this series is Cesaro summable.
+        \item   Prove by example that if $\sum_{k = 1}^{\infty} a_k$ is Cesaro summable this does not imply that $\sum_{k = 1}^{\infty} a_k$ converges.
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        \begin{proof}
+            Since $\sum_{k = 1}^{\infty} a_k$ converges, its series of partial sums \seq{a} also converges.
+            Recall Problem 3.29 in chapter 3, where we proved that if $\seq{a} \to a$, $b_n := \frac{a_1 + a_2 + \dots + a_n}{n} \to a$.
+            Suppose we apply that to \seq{s}.
+            \begin{gather}
+                s_n \to s\\
+                \frac{s_1 + s_2 + \dots + s_n}{n} \to s
+            \end{gather}
+            Conclsively, this means that \seq{s} converges.
+        \end{proof}
+
+    \subsection{Solution (b)}
+        Take the case of $a_n = (-1)^n$.
+        The sum diverges to a non-existant limit.
+        However, dividing by the number of terms makes it converge to $0.5$.
+    \pagebreak
+
+\section{Problem 4.23}
+    Show that if $\sum_{k = 1}^{\infty} a_k$ is conditionally convergent, then there exists a rearrangement of this sum which diverges to $\infty$. 
+
+\section{Problem 4.24}
+    Show that if $\sum_{k = 1}^{\infty} a_k$ is conditionally convergent, then there exists a rearrangement of this sum whose limit does not exist. 
+    \pagebreak
+
+\section{Problem 4.25}
+    Assume that $\sum_{k = 1}^{\infty} a_k$ is conditionally convergent. 
+    Define the limit superior of a sequence ($s_n$) (Notation: ``$\limsup_{n \to \infty} s_n$'') to be 
+    \[
+        \limsup_{n \to \infty} s_n = \lim_{n \to \infty} \left( \sup_{m \geq n} s_m \right)
+    \]
+    And define the limit inferior of a sequence ($s_n$) (Notation: ``$\liminf_{n \to \infty} s_n$'') to be 
+    \[
+        \liminf_{n \to \infty} s_n = \lim_{n \to \infty} \left( \inf_{m \geq n} s_m \right)
+    \]
+    Prove that for any $\alpha, \beta \in \mathbb{R} \cup \{\pm \infty\}$ with $\alpha \leq \beta$, there is a rearrangement of $\sum_{k = 1}^{\infty} a_k$ whose sequence of partial sums, $(s_n)$, have 
+    \begin{align*}
+        &\limsup_{n \to \infty} s_n = \beta &\andtxt &\liminf_{n \to \infty} s_n = \alpha
+    \end{align*}
+
+    \subsection{Solution}
+        \begin{proof}
+            We know that, for a conditionally convergent series, there exists a rearrangement that converges to any $L \in \mathbb{R} \cup \pm \infty$.
+            Suppose defined a new variable $\delta$ such that $\delta = \frac{\abs{\alpha - \beta}}{4}$.
+            We can separate $a_n$ into a sequence of its non-negative and negative terms, called \seq{p} and \seq{n} respectively.
+            \begin{gather}
+                \sum_{k=1}^{\infty} p_k \to \infty\\
+                \sum_{k=1}^{\infty} n_k \to -\infty
+            \end{gather}
+            
+            We can order \seq[k]{p} and \seq[k]{n} such that both converge to $0$.
+            \begin{gather}
+                \forall \varepsilon > 0, \exists N : \forall k > N, \abs{p_k} < \varepsilon\\
+                \forall \varepsilon > 0, \exists N : \forall k > N, \abs{n_k} < \varepsilon
+            \end{gather}
+
+            There exists some $P_0$  and $N_0$ that we can sum up to the points $P_0$ and $N_0$ that $\abs{p_{P_0}} < \abs{\alpha - \beta}$ and $\abs{n_{N_0}} < \abs{\alpha - \beta}$. 
+            \begin{equation}
+                \sum_{k=1}^{P_0} p_k + \sum_{k=1}^{N_0} n_k = c_0
+            \end{equation}
+
+            Beyond that point, there exists some $P_1$ that we can sum to that will be greater than $\beta - \delta$.
+            \begin{gather}
+                \exists P_1 \geq 0 : c_0 + \sum_{k=P_0 + 1}^{P_1} p_k = b_1 \geq \beta - \delta
+            \end{gather}
+
+            From there, we can sum over \seq{n} until the total is less than $\alpha + \delta$.
+            \begin{gather}
+                \exists N_1 \geq 0 : \alpha < b_1 + \sum_{k=N_0 + 1}^{N_1} n_k = c_1 \leq \alpha - \delta
+            \end{gather}
+
+            We can continue this for any $m \geq 1$.
+            \begin{gather}
+                \forall m \in \mathbb{N}, \exists P_m \geq P_{m - 1} : \beta > c_{m - 1} + \sum_{k=P_{m-1}+1}^{P_m} p_k = b_m \geq b_{m - 1}\\
+                \forall m \in \mathbb{N}, \exists N_m \geq N_{m - 1} : c_{m-1} > b_{m} + \sum_{k=N_{m-1}+1}^{N_m} n_k = c_m \leq \alpha
+            \end{gather}
+
+            Summing this up over all $m$, we end up with a sum that covers all of \seq{a} and which has a limit inferior of $\alpha$ and limit superior of $\beta$.
+        \end{proof}
+    \pagebreak
+
+\section{Problem 4.26}
+    Prove that if $\sum_{k = 1}^{\infty} a_k$ converges absolutely to $L$, then any rearrangement of this sum also converges to $L$. 
+
+    \subsection{Solution}
+        
+
+\section{Problem 4.27}
+    Prove that if each $a_k \geq 0$ and $\sum_{k = 1}^{\infty} a_k = \infty$, then any rearrangement of this sum also diverges to $\infty$. 
+    \pagebreak
+
+\section{Problem 4.29}
+    There is a neat theorem which, in a small way, relies on the fact that the harmonic series $\sum_{k = 1}^{\infty} \frac{1}{k}$ diverges. 
+    Here's the theorem: Every positive rational number can be written as a finite sum of distinct numbers of the form $1/n$. 
+    For example, the positive rational number $\frac{7243}{4140}$ can be written like this: 
+    \begin{equation*}
+        \frac{7243}{4140} = \frac{1}{1} + \frac{1}{2} + \frac{1}{5} + \frac{1}{21} + \frac{1}{527} + \frac{1}{3,054,492}
+    \end{equation*}
+    Now, take a moment to appreciate how magical this seems, because once you see the algorithm which produces the decomposition, it might lose some of its shine. 
+    Here's how I found the above decomposition of $\frac{7243}{4140}$ (which I basically chose at random): 
+    \begin{gather*}
+        \frac{7243}{4140} - 1 = \frac{3103}{4140}\\
+        \frac{3103}{4140} - \frac{1}{2} = \frac{1033}{4140}\\
+        \frac{1033}{4140} < \frac{1}{3} \andtxt \frac{1}{4}\\
+        \frac{1033}{4140} - \frac{1}{5} = \frac{41}{828}\\
+        \frac{41}{828} < \frac{1}{6}, \frac{1}{7}, \dots , \frac{1}{20}\\
+        \frac{41}{828} - \frac{1}{21} = \frac{11}{5796}\\
+        \frac{11}{5796} < \frac{1}{22}, \frac{1}{23}, \dots , \frac{1}{526}\\
+        \frac{11}{5796} - \frac{1}{527} = \frac{1}{3,054,492}
+    \end{gather*}
+    \begin{enumerate}[label=(\alph*)]
+        \item   If the fraction that we start with is much bigger than 1, like $\frac{244,406,536}{7}$, why is this not an issue? Why will subtracting off 1, and then 1/2, and then 1/3, and so on, eventually catch up to it? 
+        \item   Prove that if this operation is performed on a fraction $\frac{p}{q}$ which is less than 1, then the numerator necessarily decreases (in the  above example, the numerators decreased at every stage: 7243,  3103, 1033, 41, 11, 1). Note: The algorithm always subtracts  off the biggest possible reciprocal. That is, if $\frac{p}{q} < 1$, then we subtract off $\frac{1}{n}$ where $\frac{1}{n} < \frac{p}{q} < \frac{1}{n - 1}$. 
+        \item   Explain why this proves the theorem.
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        By subtracting reciprocals of natural numbers, we will be subtracting consecutive terms of the Harmonic Series.
+        The Harmonic series diverges, so for the rational number $\frac{p}{q}$ there will be a point P at which $\sum_{k=1}^{P} \frac{1}{k} < \frac{p}{q} < \sum_{k=1}^{P+1} \frac{1}{k}$.
+
+    \subsection{Solution (b)}
+        \begin{proof}
+            On any given reciprocal subtracted, there is going to be an initial rational number $\frac{p_1}{q_1}$ which we subtract $\frac{1}{n}$ from to get the unreduced rational number $\frac{p_2}{q_2}$.
+            \begin{gather}
+                \frac{p_2}{q_2} = \frac{p_1}{q_1} - \frac{1}{n}
+                    =   \frac{np_1 - q_1}{nq_1}
+            \end{gather}
+
+            Since $\frac{p_2}{q_2}$ is unreduced, we can say that $q_2 = n q_1$.
+            \begin{gather}
+                \frac{p_2}{q_2} = \frac{np_1 - q_1}{nq_1}\\
+                p_2 = np_1 - q_1
+            \end{gather}
+
+            Furthermore, $\frac{p_1}{q_1}$ lies in between two reciprocals of natural numbers, which we can extrapolate on.
+            \begin{gather}
+                \frac{1}{n-1} > \frac{p_1}{q_1}\\
+                q_1 > n p_1 - p_1\\
+                p_1 > n p_1 - q_1
+            \end{gather}
+
+            We can put that into our above equation for $p_2$.
+            \begin{equation}
+                p_2 < p_1
+            \end{equation}
+
+            Even if the rational number is reduced, this will still be the case, because the new $p_2$ will be less than the initial $p_2$.
+        \end{proof}
+
+    \subsection{Solution (c)}
+        This is because eventually, the rational number will be reduced to a point where $\frac{1}{n} < \frac{p}{q} < \frac{1}{n - 1}$.
+        After that point, the numerator will start reducing, and keep reducing until it hits 1.
 \end{document}
