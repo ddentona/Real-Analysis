@@ -21,5 +21,92 @@
 \chapter{The Things Topology Are}
 
 \section{Problem 5.1}
+
+\section{Problem 5.2}
+
+\pagebreak
+
+\section{Problem 5.3}
+    For each of the following, provide a proof or a  counterexample. 
+    \begin{enumerate}[label=(\alph*)]
+        \item   If $A$ and $B$ are compact, must $A \cup B$ be compact?
+        \item   If $A$ and $B$ are compact, must $A \cap B$ be compact?
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        \begin{proof}
+            By the Heine-Borel Theorem, if $A$ and $B$ are compact, the two of them are closed and bounded.
+            We can name bounds for the two of these and recall the definition of being closed (having an open complement).
+            \begin{gather}
+                \forall a \in A, L_A \leq a \leq U_A\\
+                \forall b \in B, L_B \leq b \leq U_B\\
+                \forall x \in A^c, \exists \delta > 0 : (x - \delta, x + \delta) \subseteq A^c\\
+                \forall x \in B^c, \exists \delta > 0 : (x - \delta, x + \delta) \subseteq B^c
+            \end{gather}
+
+            Suppose we define the union of $A$ and $B$ and its complement by DeMorgan's Law.
+            \begin{gather}
+                A \cup B = \left\{ c \vert c \in A \vee c \in B \right\}\\
+                (A \cup B)^c = A^c \cap B^c
+            \end{gather}
+
+            Since both $A^c$ and $B^c$ are open and the intersection of a finite number of open sets is also open, $A^c \cap B^c$ is open.
+            By extension, $(A \cup B)^c$ is open and $A \cup B$ is closed.
+
+            Suppose that $U = \max(U_A, U_B)$ and $L = \min(L_A, L_B)$.
+            \begin{gather}
+                \forall a \in A, U \geq U_A \geq a\\
+                \forall b \in B, U \geq U_B \geq b\\
+                \forall a \in A, L \leq L_A \leq a\\
+                \forall b \in B, L \leq L_B \leq b
+            \end{gather}
+
+            From this, we conclude that $U$ is an upper bound of $A \cup B$ and $L$ is a lower bound of $A \cup B$.
+            This means that $A \cup B$ is bounded.
+            Since $A \cup B$ is both closed and bounded, then by the Heine-Borel Theorem, it is compact.
+        \end{proof}
+
+    \subsection{Solution (b)}
+        \begin{proof}
+            By the Heine-Borel Theorem, if $A$ and $B$ are compact, the two of them are closed and bounded.
+            This means that $A^c$ and $B^c$ are open.
+            This means that $A^c \cup B^c$, which can be turned into $(A \cap B)^c$ by DeMorgan's Laws, is open.
+            $A \cap B$ is closed.
+
+            We can write the definition of $A \cap B$ and name bounds for the two of these.
+            \begin{gather}
+                A \cap B = \left\{ c \vert c \in A \andtxt c \in B \right\}\\
+                \forall a \in A, L_A \leq a \leq U_A\\
+                \forall b \in B, L_B \leq b \leq U_B\\
+                \forall c \in A \cap B, L_A \leq c \leq U_A \andtxt L_B \leq c \leq U_B
+            \end{gather}
+
+            Since there is a minimum and maximum bound of $c$, we can say that $A \cap B$ is bounded. 
+            % Suppose that $U = \min(U_A, U_B)$ and $L = \max(L_A, L_B)$.
+            % This creates some new inequalities.
+            % \begin{gather}
+            %     U_A \geq U; L \geq L_A\\
+            %     U_B \geq U; L \geq L_B
+            % \end{gather}
+
+            % We can create a new set $S$ that contains all numbers between $L$ and $U$.
+            % We can extrapolate from it with relation to $A$ and $B$.
+            % This set may be empty, which is not a problem.
+            % \begin{gather}
+            %     S = \left\{ c \vert U \geq c \geq L \andtxt c \in A \andtxt c \in B \right\}\\
+            %     \forall c \in S, U_A \geq U \geq c \geq L \geq L_A\\
+            %     \forall c \in S, U_B \geq U \geq c \geq L \geq L_B
+            % \end{gather}
+
+            Since a bounded and closed set is compact, $A \cap B$ is compact.
+        \end{proof}
+
+\section{Problem 5.5}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Give an example of countably many disjoint open intervals.
+        \item   Prove that there does not extst a collection of countably many disjoint open intervals.
+    \end{enumerate}
+
+\section{Problem 5.7}
     
 \end{document}
