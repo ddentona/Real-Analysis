@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1782308314.88996 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 6 Problems/Chapter 6 Problems.tex" "Chapter 6 Problems.pdf" "Chapter 6 Problems" 1782308315.20068 0
-  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 6 Problems/Chapter 6 Problems.tex" 1782308314.70831 3931 0016827d825866955beed96abffdc0d5 ""
+["pdflatex"] 1782315454.71837 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 6 Problems/Chapter 6 Problems.tex" "Chapter 6 Problems.pdf" "Chapter 6 Problems" 1782315455.02385 0
+  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 6 Problems/Chapter 6 Problems.tex" 1782315454.5273 4084 3e9ba3c33beda1a02ff4e45256f62312 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -52,9 +52,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727305248.69286 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1727305230 8221424 9bdbcc07e109911bb30a75dc8990d89e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Chapter 6 Problems.aux" 1782308315.16767 426 8708c5dd3a1bff8117be2baa7464e2da "pdflatex"
-  "Chapter 6 Problems.tex" 1782308314.70831 3931 0016827d825866955beed96abffdc0d5 ""
-  "Chapter 6 Problems.toc" 1782308315.16815 195 76d60a49c0b97844efc95353b04dea01 "pdflatex"
+  "Chapter 6 Problems.aux" 1782315454.99123 426 8708c5dd3a1bff8117be2baa7464e2da "pdflatex"
+  "Chapter 6 Problems.tex" 1782315454.5273 4084 3e9ba3c33beda1a02ff4e45256f62312 ""
+  "Chapter 6 Problems.toc" 1782315454.99173 195 76d60a49c0b97844efc95353b04dea01 "pdflatex"
   (generated)
   "Chapter 6 Problems.aux"
   "Chapter 6 Problems.log"

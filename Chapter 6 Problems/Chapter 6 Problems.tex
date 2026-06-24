@@ -66,32 +66,32 @@
 
         Therefore, $g(x)$ converges to $0$ from the positive direction as $x$ approaches $\infty$.
 
-        Suppose we made a sequence $a_n$ that converges to $0$ and another sequence $b_n$ that converges to $0$ from the positive direction as $n$ approaches $\infty$.
-        $g(b_n)$ would in turn diverge to $\infty$.
+        Suppose we made a sequence $a_n$ that diverges to $\infty$ from the positive direction as $n$ approaches $\infty$.
+        $g(a_n)$ would in turn converge to $0$.
         We can rewrite our initial supposition.
         \begin{gather}
             \lim_{x \to 0^+} f\left( \frac{1}{x} \right) \neq \lim_{x \to \infty} f(x)
         \end{gather}
 
-        We can rewrite the latter term by substituting in $g(x)$.
+        We can rewrite the latter term by substituting in $g(a_n)$, which is a sequence in $\mathbb{R}$ that converges to $0$ from the positive direction.
         \begin{equation}
-            \lim_{x \to 0^+} f\left( \frac{1}{x} \right) = \lim_{n \to \infty} \frac{1}{g(b_n)}
-                =   \lim_{n \to \infty} \frac{1}{\frac{1}{b_n}}
-                =   \lim_{n \to \infty} b_n
+            \lim_{x \to 0^+} f\left( \frac{1}{x} \right) = \lim_{n \to \infty} f \left( \frac{1}{g(a_n)} \right)
+                =   \lim_{n \to \infty} f \left( \frac{1}{\frac{1}{a_n}} \right)
+                =   \lim_{n \to \infty} f \left( a_n \right)
         \end{equation}
 
-        We can rewrite the former term by substitutring in $a_n$.
+        We can rewrite the former term by substituting in $a_n$.
         \begin{equation}
-            \lim_{x \to \infty} f(x) = \lim_{n \to \infty} a_n
+            \lim_{x \to \infty} f(x) = \lim_{n \to \infty} f \left( a_n \right)
         \end{equation}
 
         Apply these to the inequality.
         \begin{equation}
-            \lim_{n \to \infty} b_n \neq \lim_{n \to \infty} a_n
+            \lim_{n \to \infty} f(a_n) \neq \lim_{n \to \infty} f(a_n)
         \end{equation}
 
-        This contradicts the idea that functional limits are unique.
-        Ergo, our initial assumption is false and $\lim_{x \to 0} f\left( \frac{1}{x} \right) = \lim_{x \to 1} f(x)$. 
+        This contradicts the idea that functional limits are unique, as well as the reflexive property.
+        Ergo, our initial assumption is false and $\lim_{x \to 0} f\left( \frac{1}{x} \right) = \lim_{x \to \infty} f(x)$. 
     \end{proof}
 
 \end{document}
