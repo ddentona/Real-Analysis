@@ -1,0 +1,97 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\newenvironment{case}[2]{\par\textbf{Case #1: #2.}}{}
+
+\begin{document}
+\renewcommand\qedsymbol{OE$\Delta$}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\andtxt}{\text{ and }}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Ext}{\text{Ext}}
+\newcommand{\mathif}{\text{if }}
+\newcommand{\seq}[2][n]{\ensuremath{(#2 _{#1})}}
+
+\tableofcontents
+\pagebreak
+
+\setcounter{chapter}{5}
+\chapter{The Continuity Struggle}
+\pagebreak
+
+\setcounter{section}{11}
+\section{Problem 6.12}
+    Let $f: \mathbb{R} \to \mathbb{R}$. 
+    Prove that $\lim_{x \to 0} f\left( \frac{1}{x} \right) = \lim_{x \to 1} f(x)$. 
+    That is, prove that if one converges to some $L$, then the  other also converges to $L$; if one diverges to $\infty$ or to $-\infty$ or whose limit does not exist, then the other does the same. 
+
+    \subsection{Solution}
+    \begin{proof}[Proof by Contradiction]
+        Suppose for contradiction that the two limits are not equal.
+        \begin{gather}
+            \lim_{x \to 0^+} f\left( \frac{1}{x} \right) \neq \lim_{x \to \infty} f(x)
+        \end{gather}
+
+        Suppose there exists a function $g: \mathbb{R} \to \mathbb{R}$ defined aas taking the reciprocal of its initial value.
+        \begin{equation}
+            g(x) := \frac{1}{x}
+        \end{equation}
+
+        We can prove that $g(x)$ converges to $0$ from the positive direction as $x$ approaches $\infty$.
+        Suppose Let $\varepsilon > 0$ and let $\delta = \frac{1}{\epsilon} > 0$.
+        Then, for any $x$ that satisfies $x > \delta$ and $x > 0$, we can take its reciprocal.
+        \begin{gather}
+            0 < \frac{1}{x} < \frac{1}{\delta}
+        \end{gather}
+        
+        Recall that, by the sequence squeeze theorem and the Archimedian Principle, for every sequence $x_n$ that converges to $\infty$, $\frac{1}{x_n}$ converges to $0$, so we can replace $\frac{1}{\infty}$ with $0$.
+        \begin{align}
+            \abs{g(x) - g(\infty)}   &=  \abs{\frac{1}{x} - \frac{1}{\infty}}\\
+                &=  \abs{\frac{1}{x} - 0}
+                =   \abs{\frac{1}{x}}
+        \end{align}
+        
+        This has an attached inequality from earlier.
+        \begin{gather}
+            \abs{g(x) - g(\infty)}  <  \abs{\frac{1}{\delta}}
+                =   \abs{\frac{1}{\frac{1}{\varepsilon}}}
+                =   \abs{\varepsilon}
+                =   \varepsilon\\
+            \abs{g(x) - g(\infty)} < \varepsilon
+        \end{gather}
+
+        Therefore, $g(x)$ converges to $0$ from the positive direction as $x$ approaches $\infty$.
+
+        Suppose we made a sequence $a_n$ that converges to $0$ and another sequence $b_n$ that converges to $0$ from the positive direction as $n$ approaches $\infty$.
+        $g(b_n)$ would in turn diverge to $\infty$.
+        We can rewrite our initial supposition.
+        \begin{gather}
+            \lim_{x \to 0^+} f\left( \frac{1}{x} \right) \neq \lim_{x \to \infty} f(x)
+        \end{gather}
+
+        We can rewrite the latter term by substituting in $g(x)$.
+        \begin{equation}
+            \lim_{x \to 0^+} f\left( \frac{1}{x} \right) = \lim_{n \to \infty} \frac{1}{g(b_n)}
+                =   \lim_{n \to \infty} \frac{1}{\frac{1}{b_n}}
+                =   \lim_{n \to \infty} b_n
+        \end{equation}
+
+        We can rewrite the former term by substitutring in $a_n$.
+        \begin{equation}
+            \lim_{x \to \infty} f(x) = \lim_{n \to \infty} a_n
+        \end{equation}
+
+        Apply these to the inequality.
+        \begin{equation}
+            \lim_{n \to \infty} b_n \neq \lim_{n \to \infty} a_n
+        \end{equation}
+
+        This contradicts the idea that functional limits are unique.
+        Ergo, our initial assumption is false and $\lim_{x \to 0} f\left( \frac{1}{x} \right) = \lim_{x \to 1} f(x)$. 
+    \end{proof}
+
+\end{document}

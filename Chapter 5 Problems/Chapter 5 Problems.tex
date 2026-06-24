@@ -11,6 +11,8 @@
 \renewcommand\qedsymbol{OE$\Delta$}
 \newcommand{\abs}[1]{\left| #1 \right|}
 \newcommand{\andtxt}{\text{ and }}
+\newcommand{\Int}{\text{Int}}
+\newcommand{\Ext}{\text{Ext}}
 \newcommand{\mathif}{\text{if }}
 \newcommand{\seq}[2][n]{\ensuremath{(#2 _{#1})}}
 
@@ -108,5 +110,290 @@
     \end{enumerate}
 
 \section{Problem 5.7}
+
+\pagebreak
+
+\section{Problem 5.21}
+    For sets $A$ and $B$, define $A \cdot B = {a \cdot b: a \in A, b \in B}$.  
+    \begin{enumerate}[label=(\alph*)]
+        \item   If $A$ and $B$ are open, must $A \cdot B$ be open?
+        \item   If $A$ and $B$ are compact, must $A \cdot B$ be compact?
+        \item   If $A$ and $B$ are closed, must $A \cdot B$ be closed?
+    \end{enumerate}
+
+    \subsection{Solution (a)}
+        Yes.
+        \begin{proof}
+            Recall what it means that $A$ and $B$ are open.
+            For $A$, it means that for all $a \in A$, there exists some $\delta_a > 0$ such that $(a - \delta_a, a + \delta_a) \subseteq A$.
+            For $B$, it means that for all $b \in B$, there exists some $\delta_b > 0$ such that $(b - \delta_b, b + \delta_b) \subseteq B$.
+
+            Suppose some term $a \in A$ and some term $b \in B$.
+            We wind up with multiple cases, based on whether $a$ or $b$ or both is positive or negative, or if either is zero.
+            \begin{case}{1}{Both positive}
+                If both are positive, that means that $\frac{\delta_b}{a} > 0$.
+                \begin{equation}
+                    \beta \in \left(b - \frac{\delta_b}{a}, b + \frac{\delta_b}{a}\right) \subseteq B
+                \end{equation}
+
+                This can be rewritten, for all $\beta$.
+                \begin{gather}
+                    b - \frac{\delta_b}{a} < \beta < b + \frac{\delta_b}{a}
+                \end{gather}
+
+                Multiply all sides by $a$.
+                Since $a \in A$ and $\beta \in B$, this means that $a\beta \in A \cdot B$.
+                \begin{gather}
+                    ab - \delta_b < a\beta < ab + \delta_b
+                \end{gather}
+
+                This means that $\forall a\beta \in \left( ab - \delta_b, ab + \delta_b \right)$, $a\beta \in A \cdot B$.
+                It also means that $\left( ab - \delta_b, ab + \delta_b \right) \subseteq A \cdot B$.
+                This means that $A \cdot B$ is open.
+            \end{case}
+
+            \begin{case}{2}{Either or both negative}
+                Suppose that just $a$ is negative.
+                If only $b$ is negative, this can be changed appropriately.
+                This means that $\frac{\delta_b}{a} < 0$, and that $-\frac{\delta_b}{a} > 0$.
+                \begin{equation}
+                    \beta \in \left(b + \frac{\delta_b}{a}, b - \frac{\delta_b}{a}\right) \subseteq B
+                \end{equation}
+
+                This can be rewritten, for all $\beta$.
+                \begin{gather}
+                    b + \frac{\delta_b}{a} < \beta < b - \frac{\delta_b}{a}
+                \end{gather}
+                
+                Multiply all sides by $a$.
+                This will reverse the signs.
+                Since $a \in A$ and $\beta \in B$, this means that $a\beta \in A \cdot B$.
+                \begin{gather}
+                    ab + \delta_b > a\beta > ab - \delta_b
+                \end{gather}
+
+                This means that $\forall a\beta \in \left( ab - \delta_b, ab + \delta_b \right)$, $a\beta \in A \cdot B$.
+                It also means that $\left( ab - \delta_b, ab + \delta_b \right) \subseteq A \cdot B$.
+            \end{case}
+
+            \begin{case}{3}{Either are zero}
+                Suppose that $a = 0$ and $b \neq 0$.
+                We can rewrite our open interval.
+                \begin{equation}
+                    \left(a - \frac{\delta_a}{b}, a + \frac{\delta_a}{b}\right) = \left(-\frac{\delta_a}{b}, \frac{\delta_a}{b}\right) \subseteq A
+                \end{equation}
+
+                Multiply it by $b \in B$.
+                \begin{gather}
+                    \left(-\delta_a, \delta_a\right) \subseteq A \cdot B
+                \end{gather}
+            \end{case}
+
+            \begin{case}{4}{Both are zero}
+                Suppose that $a = 0$ and $b = 0$.
+                Recall that $\delta_b > 0$, which also means $\frac{\delta_b}{2} > 0$.
+                We can rewrite our open interval.
+                \begin{gather}
+                    \left(a - \frac{\delta_a}{\delta_b}, a + \frac{\delta_a}{\delta_b}\right) = \left(-\frac{\delta_a}{\delta_b}, \frac{\delta_a}{\delta_b}\right) \subseteq A
+                \end{gather}
+
+                Multiply it by $b + \frac{\delta_b}{2} = \frac{\delta_b}{2} \in B$.
+                \begin{gather}
+                    \left(-\frac{\delta_a}{2}, \frac{\delta_a}{2}\right) \subseteq A \cdot B
+                \end{gather}
+            \end{case}
+
+            This covers all the cases, which means that $A \cdot B$ is open.
+        \end{proof}
+
+    \subsection{Solution (b)}
+        Because $A$ and $B$ are compact, both are closed and bounded.
+        This means that all $a \in A$ and $b \in B$ are within intervals.
+        \begin{gather}
+            L_A < a < U_A\\
+            L_B < b < U_B
+        \end{gather}
+
+        We can multiply the terms together, and that establish a set of configurations depending on which terms are negative.
+        \begin{gather}
+            S = \{L_A \cdot L_B, U_A \cdot L_B, L_A \cdot U_B, U_A \cdot U_B\}\\
+            \min\{S\} < ab < \max\{S\}
+        \end{gather}
     
+        This means $A \cdot B$ is bounded.
+
+        Suppose now that there is a sequence in $A \cdot B$ called \seq{x}.
+        For all elements in \seq{x}, each element is a multiple of some element $a_n$ and another $b_n$.
+        \begin{gather}
+            x_n = a_n b_n
+        \end{gather}
+
+        For every $a \in A$ and $b \in B$, there exists a subsequence of \seq{a} and \seq{b} that converges to $a$ and $b$ respectively.
+        \begin{gather}
+            a_{n_k} \to a;
+            b_{n_j} \to b
+        \end{gather}
+
+        Since $a \in A$ and $b \in B$, $ab \in A \cdot B$.
+        Due to the sequence limit laws, $a_{n_k}b_{n_j}$ converges to $a \cdot b$.
+        This means that for any $a \cdot b \in A \cdot B$, there is a subsequence \seq[n_j]{x} of \seq{x} that converges to $a \cdot b$.
+        Therefore, $A \cdot B$ is compact.
+
+    \subsection{Solution (c)}
+        Suppose that $A = \left\{ \frac{1}{2n} \Big| n \in \mathbb{N} \right\} \cup \left\{ 0 \right\}$ and $B = \left\{ 2n + 1 \Big| n \in \mathbb{N} \right\}$.
+        Both are closed.
+        However, $A \cdot B$ contains a sequence that converges to $1$ but does not contain it.
+        This means that $A \cdot B$ does not contain all its limit points, so it is not closed.
+\pagebreak
+
+\section{Problem 5.22}
+    Let $A$ be the set of numbers in $\left[ 0, 1 \right]$ whose decimal expansions use only the numbers $2$, $5$ and $8$. 
+    For example, $0.5822585582 \in A$, and $0.2525252525\ldots \in A$. 
+    Prove that $A$ is a closed set.
+    
+    \subsection{Solution}
+    \begin{proof}[Proof by Contradiction]
+        Suppose for contradiction that a sequence in $A$ converges to a point $a \notin A$.
+        Throughout, use the decimal expansion that does not end in an infinite string of 9's.
+        \begin{gather}
+            \forall \varepsilon > 0, \exists N : \forall n > N, \abs{a_n - a} < \varepsilon
+        \end{gather}
+
+        $a$ and every $a_n$ can be written in the form of a sum of numbers.
+        \begin{gather}
+            a_n = \sum_{k=1}^{n} s_k \times 10^{-k}, s_k \in \{2, 5, 8\}\\
+            a = \sum_{k=1}^{\infty} t_k \times 10^{-k}, t_k \in \{2, 5, 8, m\}, m \in \{1, 3, 4, 6, 7, 9, 0\}
+        \end{gather}
+
+        We can put these into the convergence equation.
+        \begin{gather}
+            s_k \in \{2, 5, 8\}; t_k \in \{2, 5, 8, m\}; m \in \{1, 3, 4, 6, 7, 9, 0\}\\
+            \abs{\sum_{k=1}^{n} s_k \times 10^{-k} - \sum_{k=1}^{\infty} t_k \times 10^{-k}} < \varepsilon\\
+            \abs{\sum_{k=1}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k}} < \varepsilon
+        \end{gather}
+
+        Suppose that point $j$ is the first point where $t_j \in m$ and $s_k \neq t_k$, while $s_j \in \{2, 5, 8\}$.
+        We can simplify $\sum_{k=1}^{n} (s_k - t_k) \times 10^{-k}$.
+        \begin{gather}
+            \sum_{k=1}^{n} (s_k - t_k) \times 10^{-k} = \sum_{k=j}^{n} (s_k - t_k) \times 10^{-k}\\
+            \abs{\sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k}} < \varepsilon
+        \end{gather}
+
+        At point $j$, $\abs{s_j - t_j} \geq 1$, which means that $s_j - t_j \geq 1$ or $t_j - s_j \geq 1$.
+        This gives us two cases.
+
+        \begin{case}{1}{$s_j - t_j \geq 1$}
+            Take the above convergence equation.
+            If $n > j$, then the maximum value of $s_k - t_k$ is $8$.
+            Even if for all $k \geq n+1$, $t_k = 9$, it will always be the case that the magnitude of the sum up to and including $k = n$ will be greater than the sum after that point.
+            \begin{gather}
+                \sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} > \sum_{k=n+1}^{\infty} t_k \times 10^{-k}\\
+                \abs{\sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k}} > 0\\
+                \sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k} < \varepsilon
+            \end{gather}
+
+            Our sum of sums will always be greater than or equal to $10^{-j}$.
+            \begin{gather}
+                10^{-j} \leq \sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k} < \varepsilon
+            \end{gather}
+
+            This creates a contradiction, since $\varepsilon$ should be able to be less than $10^{-j}$.
+
+            There is one edge case, when $j = n$, $s_j - t_j = 1$, and $t_k = 9$ for all $k > n$.
+            In that case, $\sum_{k=n+1}^{\infty} t_k \times 10^{-k} = 0.\overline{99} \times 10^{-j} = 10^{-j}$.
+            Therefore, as long as the decimal expansion terminates at digit $j$, we can increase $t_j$ by 1.
+            This would mean that $s_j = t_j$, which would in turn hold true for all $k$.
+            This, however, would have $a \in A$, which would contradict our supposition for contradiction.
+        \end{case}
+
+        \begin{case}{2}{$t_j - s_j \geq 1$}
+            This will be pretty similar in execution to case 1.
+            Take the above convergence equation.
+            If $n > j$, then the maximum value of $t_k - s_k$ is $8$.
+            Even if for all $k \geq n+1$, $t_k = 9$, it will always be the case that the magnitude of the sum up to and including $k = n$ will be greater than the sum after that point.
+            \begin{gather}
+                \scriptstyle
+                \abs{\sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k}} = \abs{\sum_{k=n+1}^{\infty} t_k \times 10^{-k} - \sum_{k=j}^{n} (s_k - t_k) \times 10^{-k}}\\
+                \scriptstyle
+                \abs{\sum_{k=j}^{n} (s_k - t_k) \times 10^{-k} - \sum_{k=n+1}^{\infty} t_k \times 10^{-k}} = \abs{\sum_{k=n+1}^{\infty} t_k \times 10^{-k} + \sum_{k=j}^{n} (t_k - s_k) \times 10^{-k}}\\
+                \abs{\sum_{k=n+1}^{\infty} t_k \times 10^{-k} + \sum_{k=j}^{n} (t_k - s_k) \times 10^{-k}} > 0\\
+                \sum_{k=n+1}^{\infty} t_k \times 10^{-k} + \sum_{k=j}^{n} (t_k - s_k) \times 10^{-k} < \varepsilon
+            \end{gather}
+
+            Our sum of sums will always be greater than or equal to $10^{-j}$.
+            \begin{gather}
+                10^{-j} \leq \sum_{k=n+1}^{\infty} t_k \times 10^{-k} + \sum_{k=j}^{n} (t_k - s_k) \times 10^{-k} < \varepsilon
+            \end{gather}
+
+            This creates a contradiction, since $\varepsilon$ should be able to be less than $10^{-j}$.
+            There is no edge case this time.
+        \end{case}
+
+        Ergo, our initial assumption is false, so $A$ is closed.
+    \end{proof}
+
+    \subsection*{Scratch Work}
+        $A$ would be closed, also bounded so it'd be compact.
+        
+        STE an open cover of $A$.
+        \begin{gather}
+            A \subseteq \bigcup_{\alpha = 0}^{n} U_\alpha\\
+            \forall a \in A, \exists \delta > 0, \exists \alpha : (a - \delta, a + \delta) \subseteq U_\alpha
+        \end{gather}
+
+        The numbers can be mapped by the natural numbers.
+        \begin{tabular}{| l | r |}
+            1 & 0.2\\
+            2 & 0.5\\
+            3 & 0.8\\
+            4 & 0.22\\
+            5 & 0.25\\
+            6 & 0.28\\
+            7 & 0.32\\
+            8 & 0.35\\
+            9 & 0.38
+        \end{tabular}
+        
+\pagebreak
+
+\section{Problem 5.24}
+    A set $A$ is said to have the intersecting closedness property if it satisfies this condition: 
+    If $S$ is any collection of closed sets for which the intersection of any finite number of sets from $S$ contains an element of $A$, then the intersection of every set in $S$ also contains an element of $A$. 
+    
+    Prove that A has the intersecting closedness property if and only if A is compact.
+
+\section{Problem 5.26}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Prove that if $A$ is compact, then $\sup(A)$ exists and $\sup(A) \in A$. Does the same hold for the infimum? 
+        \item   Give an example of a set which contains its supremum and its infimum, but is not compact. 
+        \item   If a set contains its supremum, its infimum, and all of its limit points, must it be compact? 
+    \end{enumerate}
+
+\section{Problem 5.28}
+    For which compact sets $A$ does there exist an $m \in N$ such that every open cover of $A$ contains a subcover containing at most $m$ open sets? 
+
+\section{Problem 5.30}
+    Give two examples of sets which are neither open nor closed. 
+    Have one example be a bounded set and the other be an unbounded set. 
+
+\section{Problem 5.31}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Find the interior, exterior and boundary for each of the following  sets: $(0, 1)$, $[0, 1]$, $\mathbb{R}$ and $\mathbb{Q}$. 
+        \item   Prove that for any set $A$, we have $\mathbb{R} = \Int(A) \cup \partial A \cup \Ext(A)$,  and this is a disjoint union. 
+    \end{enumerate}
+
+\section{Problem 5.32}
+    Prove that the only sets with empty boundary are $\mathbb{R}$ and $\emptyset$.
+\pagebreak
+
+\section{Problem 5.33}
+    \begin{enumerate}[label=(\alph*)]
+        \item   Explain intuitively what it means for a set $A$ to be connected. 
+        \item   Give an example of a connected set and of a set that is not  connected. You do not need to prove your answers. 
+        \item   Give an example of a set A which is not connected, but $A \cup \{4\}$ is connected.
+        \item   Prove that $\{1, 2, 3, 4, 5\}$ is not connected.
+        \item   Prove that $\mathbb{Q}$ is not connected.
+        \item   Give an example of a set $A$ which is not connected, but there exists some $x_0 \in \mathbb{R}$ such that $A \cup {x_0}$ is connected. 
+        \item   Prove that a set of real numbers with more than one element is connected if and only if it is an interval. 
+    \end{enumerate}
 \end{document}

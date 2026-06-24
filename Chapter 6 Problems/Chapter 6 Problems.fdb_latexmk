@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1781489923.33701 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 5 Problems/Chapter 5 Problems.tex" "Chapter 5 Problems.pdf" "Chapter 5 Problems" 1781489923.69713 0
-  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 5 Problems/Chapter 5 Problems.tex" 1781489923.13753 19570 468e97482b858932b6b19b168fb2cf10 ""
+["pdflatex"] 1782308314.88996 "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 6 Problems/Chapter 6 Problems.tex" "Chapter 6 Problems.pdf" "Chapter 6 Problems" 1782308315.20068 0
+  "/Users/dentonaingworth/Documents/Extra-Math/Real Analysis/Chapter 6 Problems/Chapter 6 Problems.tex" 1782308314.70831 3931 0016827d825866955beed96abffdc0d5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -30,10 +30,8 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty" 1591045760 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
@@ -54,12 +52,12 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727305248.69286 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1727305230 8221424 9bdbcc07e109911bb30a75dc8990d89e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Chapter 5 Problems.aux" 1781489923.65716 2293 579ce67c58b7cdb3e4ec4b98f8932c3a "pdflatex"
-  "Chapter 5 Problems.tex" 1781489923.13753 19570 468e97482b858932b6b19b168fb2cf10 ""
-  "Chapter 5 Problems.toc" 1781489923.65758 1323 e16ee2bf41226feda59c190ba7646a0e "pdflatex"
+  "Chapter 6 Problems.aux" 1782308315.16767 426 8708c5dd3a1bff8117be2baa7464e2da "pdflatex"
+  "Chapter 6 Problems.tex" 1782308314.70831 3931 0016827d825866955beed96abffdc0d5 ""
+  "Chapter 6 Problems.toc" 1782308315.16815 195 76d60a49c0b97844efc95353b04dea01 "pdflatex"
   (generated)
-  "Chapter 5 Problems.aux"
-  "Chapter 5 Problems.log"
-  "Chapter 5 Problems.pdf"
-  "Chapter 5 Problems.toc"
+  "Chapter 6 Problems.aux"
+  "Chapter 6 Problems.log"
+  "Chapter 6 Problems.pdf"
+  "Chapter 6 Problems.toc"
   (rewritten before read)
